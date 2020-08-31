@@ -1,4 +1,4 @@
-# ureport_app
+# ureport-mobile
 
 A new Flutter application.
 
