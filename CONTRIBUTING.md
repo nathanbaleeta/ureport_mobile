@@ -33,7 +33,19 @@ This is a starting point for new developers who wish to setup their development 
 
 4. Clone the repo with `git clone https://github.com/unicef/unicef-mobile.git`
 
-Once it is done, you can modify any file locally and test drive the app using the phone emulator.
+Once it is done, you can modify any file locally and test drive the app using the device emulator.
+
+### Coding formatting
+To be more productive as a team of developers we follow a single, shared style which is enforced through automatic formatting. Depending on your text editor, please follow the instructions below to configure automatic formatting:
+
+
+- **Android Studio/ IntelliJ:** Install the Dart plugin (see Editor setup) to get automatic formatting of code in Android Studio and IntelliJ. To automatically format your code in the current source code window, use Cmd+Alt+L (on Mac) or Ctrl+Alt+L (on Windows and Linux). Android Studio and IntelliJ also provides a check box named Format code on save on the Flutter page in Preferences (on Mac) or Settings (on Windows and Linux) which will format the current file automatically when you save it.
+
+- **VS Code:** nstall the Flutter extension (see Editor setup) to get automatic formatting of code in VS Code.To automatically format the code in the current source code window, right-click in the code window and select Format Document. You can add a keyboard shortcut to this VS Code Preferences.
+To automatically format code whenever you save a file, set the editor.formatOnSave setting to true.
+
+Finally, when you submit a Pull Request, they are run again by our continuous integration tools, but hopefully, your code is already clean!
+
 
 ## Submitting a Pull Request (Guidelines)
 
