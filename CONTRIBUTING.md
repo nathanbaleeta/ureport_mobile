@@ -20,6 +20,9 @@ ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef
 * **Comments** allow anyone with access to the repository to provide feedback.
 
 
+## CI/CD
+We use [CircleCI](https://circleci.com/) for continuous integration to automatically run unit and integration tests before merging new code into the base branch. 
+
 ## Project Wiki
 Our [wiki](https://github.com/unicef/ureport-mobile/wiki) has several pages of information for developers, and people contributing to ureport-mobile. Check it out for your authoritative source of information about the ureport-mobile community.
 
