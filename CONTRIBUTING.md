@@ -35,7 +35,7 @@ This is a starting point for new developers who wish to setup their development 
 
 Once it is done, you can modify any file locally and test drive the app using the phone emulator.
 
-## Submitting a Pull Request(Guidelines)
+## Submitting a Pull Request (Guidelines)
 
 Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
 
