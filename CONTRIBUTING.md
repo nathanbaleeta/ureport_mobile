@@ -9,6 +9,20 @@ Thank you for helping us make this project great and being a part of the ureport
 ureport-mobile has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we expect project participants to adhere to it.
 Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
+
+## Setting up your development environment
+You will need a [text editor](https://www.python.org/downloads/) and an [phone devic emulator.](https://nodejs.org/en/download/releases/)
+
+This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
+
+1. Install Flutter on your workstation. Depending on your OS, follow the specific [instructions](https://flutter.dev/docs/get-started/install).
+2. Set up an editor of your choice ranging from Android Studio, Visual Studio Code to Emacs. Follow these [guidelines](https://flutter.dev/docs/get-started/install).
+3. Create virtual devices using [AVD manager](https://developer.android.com/studio/run/managing-avds) to test drive your app during development. Maintain minimum API level of 24.
+
+4. Clone the repo with `git clone https://github.com/unicef/unicef-mobile.git`
+
+Once it is done, you can modify any file locally and test drive the app using the phone emulator.
+
 ## Submitting a Pull Request(Guidelines)
 
 Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
