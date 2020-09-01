@@ -11,7 +11,7 @@ Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what
 
 
 ## Setting up your development environment
-You will need a [text editor](https://www.python.org/downloads/) and an [phone devic emulator.](https://nodejs.org/en/download/releases/)
+You will need a [text editor](https://flutter.dev/docs/get-started/install) and an [phone emulator.](https://developer.android.com/studio/run/managing-avds)
 
 This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
 
