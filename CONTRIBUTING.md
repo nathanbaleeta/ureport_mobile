@@ -11,7 +11,7 @@ Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what
 
 ## What you need to know
 
-In order to contribute as a developer you will need to have a basic understanding of [Dart](https://dart.dev/), [Flutter](https://flutter.dev/), [RapidPro](https://rapidpro.io/), [Firebase Cloud Messaging](https://pub.dev/packages/firebase_messaging) and [Github](https://help.github.com/en/github). 
+In order to contribute as a developer you will need to have a basic understanding of [Dart](https://dart.dev/), [Flutter](https://flutter.dev/), [RapidPro](https://rapidpro.io/), [Firebase Cloud Messaging](https://pub.dev/packages/firebase_messaging), [AVD Manager](https://developer.android.com/studio/run/managing-avds) and [Github](https://help.github.com/en/github). 
 
 ## Setting up your development environment
 You will need a [text editor](https://flutter.dev/docs/get-started/install) and an [phone emulator.](https://developer.android.com/studio/run/managing-avds)
