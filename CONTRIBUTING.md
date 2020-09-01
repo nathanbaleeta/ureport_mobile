@@ -19,6 +19,10 @@ ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef
 * One **assignee** is responsible for working on the issue at any given time.
 * **Comments** allow anyone with access to the repository to provide feedback.
 
+
+## Project Wiki
+Our [wiki](https://github.com/unicef/ureport-mobile/wiki) has several pages of information for developers, and people contributing to ureport-mobile. Check it out for your authoritative source of information about the ureport-mobile community.
+
 ## License
 
 By contributing your code to the unicef/ureport-mobile GitHub repository, you agree to license your contribution under the GNU GENERAL PUBLIC LICENSE.
