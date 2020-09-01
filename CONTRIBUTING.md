@@ -18,3 +18,8 @@ ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef
 * A **milestone** acts like a container for issues. This is useful for associating a group of issues with specific features or time period (e.g. Weekly Sprint 9/9-9/20 or FCM 1.0.0). 
 * One **assignee** is responsible for working on the issue at any given time.
 * **Comments** allow anyone with access to the repository to provide feedback.
+
+## License
+
+By contributing your code to the unicef/ureport-mobile GitHub repository, you agree to license your contribution under the GNU GENERAL PUBLIC LICENSE.
+
