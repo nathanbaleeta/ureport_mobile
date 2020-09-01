@@ -15,6 +15,6 @@ Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what
 ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef/ureport-mobile/issues) for easy collaboration among developers to keep track of tasks, enhancements, and bugs during software sprints. A typical issue looks like this:
 * A **title** and **description** describe what the issue is all about.
 * Color-coded labels help you categorize and filter your issues (just like labels in email).
-* A **milestone** acts like a container for issues. This is useful for associating a group of issues with specific features or time period (e.g. Weekly Sprint 9/7-7/20 or PWA 1.0). 
+* A **milestone** acts like a container for issues. This is useful for associating a group of issues with specific features or time period (e.g. Weekly Sprint 9/7-7/20 or FCM 1.0.0). 
 * One **assignee** is responsible for working on the issue at any given time.
 * **Comments** allow anyone with access to the repository to provide feedback.
