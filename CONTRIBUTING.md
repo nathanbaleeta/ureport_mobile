@@ -13,6 +13,15 @@ Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what
 
 In order to contribute as a developer you will need to have a basic understanding of [Dart](https://dart.dev/), [Flutter](https://flutter.dev/), [RapidPro](https://rapidpro.io/), [Firebase Cloud Messaging](https://pub.dev/packages/firebase_messaging), [Android Studio AVD Manager](https://developer.android.com/studio/run/managing-avds) and [Github](https://help.github.com/en/github). 
 
+## Issue tracking
+
+ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef/ureport-mobile/issues) for easy collaboration among developers to keep track of tasks, enhancements, and bugs during software sprints. A typical issue looks like this:
+* A **title** and **description** describe what the issue is all about.
+* Color-coded labels help you categorize and filter your issues (just like labels in email).
+* A **milestone** acts like a container for issues. This is useful for associating a group of issues with specific features or time period (e.g. Weekly Sprint 9/9-9/20 or FCM 1.0.0). 
+* One **assignee** is responsible for working on the issue at any given time.
+* **Comments** allow anyone with access to the repository to provide feedback.
+
 ## Setting up your development environment
 You will need a [text editor](https://flutter.dev/docs/get-started/install) and an [phone emulator.](https://developer.android.com/studio/run/managing-avds)
 
@@ -40,18 +49,6 @@ In summary, if you want to contribute to ureport-mobile, the simplest way is to:
 7. Push it back to your repo.
 8. Click the Compare & pull request button.
 9. Click Create pull request to open a new pull request.
-
-
-
-## Issue tracking
-
-ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef/ureport-mobile/issues) for easy collaboration among developers to keep track of tasks, enhancements, and bugs during software sprints. A typical issue looks like this:
-* A **title** and **description** describe what the issue is all about.
-* Color-coded labels help you categorize and filter your issues (just like labels in email).
-* A **milestone** acts like a container for issues. This is useful for associating a group of issues with specific features or time period (e.g. Weekly Sprint 9/9-9/20 or FCM 1.0.0). 
-* One **assignee** is responsible for working on the issue at any given time.
-* **Comments** allow anyone with access to the repository to provide feedback.
-
 
 ## CI/CD
 We use [CircleCI](https://circleci.com/) for continuous integration to automatically run unit and integration tests before merging new code into the base branch. 
