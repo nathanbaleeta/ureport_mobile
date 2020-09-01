@@ -17,9 +17,12 @@ This is a starting point for new developers who wish to setup their development 
 
 For questions and support please use the group chat. The [issue list](https://github.com/unicef/ureport-mobile/issues) of this repo is exclusively for bug reports and feature requests.
 
-
 ## Issues
 
 Please make sure to read the [Issue Reporting Checklist](https://github.com/unicef/ureport-mobile/blob/master/CONTRIBUTING.md) before opening an issue. Issues not conforming to the guidelines may be closed immediately.
+
+## Changelog
+
+Detailed changes for each release are documented in the [release notes.](https://github.com/unicef/ureport-mobile/releases)
 
 
