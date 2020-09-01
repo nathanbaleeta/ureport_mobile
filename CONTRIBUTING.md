@@ -9,6 +9,22 @@ Thank you for helping us make this project great and being a part of the ureport
 ureport-mobile has adopted the [Contributor Covenant](https://www.contributor-covenant.org/) as its Code of Conduct, and we expect project participants to adhere to it.
 Please read [the full text](/CODE_OF_CONDUCT.md) so that you can understand what actions will and will not be tolerated.
 
+## Submitting a Pull Request(Guidelines)
+
+Good pull requests, such as patches, improvements, and new features, are a fantastic help. They should remain focused in scope and avoid containing unrelated commits.
+
+In summary, if you want to contribute to ureport-mobile, the simplest way is to:
+1. Claim an [issue](https://github.com/unicef/ureport-mobile/issues) from the issue tracker.
+2. Fork the [ureport-mobile](https://github.com/unicef/ureport-mobile) project.
+3. Clone it to your local system.
+4. Make a new branch.
+5. Make your changes.
+6. Try as much as you can to include unit tests for your changes. 
+7. Push it back to your repo.
+8. Click the Compare & pull request button.
+9. Click Create pull request to open a new pull request.
+
+
 
 ## Issue tracking
 
