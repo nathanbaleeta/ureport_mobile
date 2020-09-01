@@ -33,6 +33,8 @@ Thank you to all the people who already contributed to IOGT-PWA!
 
 <a href="https://github.com/bppanwar"><img src="https://avatars1.githubusercontent.com/u/6149957?v=4" width=40></a>
 <a href="https://github.com/nathanbaleeta"><img src="https://avatars2.githubusercontent.com/u/8824104?v=4" width=40></a>
+<a href="https://github.com/alee8599"><img src="https://avatars2.githubusercontent.com/u/32917335?v=4" width=40></a>
+
             
 ## License
 [GNU GENERAL PUBLIC LICENSE](https://github.com/nathanbaleeta/ureport-mobile/blob/develop/LICENSE)
