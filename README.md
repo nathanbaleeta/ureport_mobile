@@ -29,7 +29,7 @@ Detailed changes for each release are documented in the [release notes.](https:/
 
 Please make sure to read the [contributing guide](https://github.com/unicef/ureport-mobile/blob/master/CONTRIBUTING.md) before making a pull request. 
 
-Thank you to all the people who already contributed to IOGT-PWA!
+Thank you to all the people who already contributed to ureport-mobile!
 
 <a href="https://github.com/bppanwar"><img src="https://avatars1.githubusercontent.com/u/6149957?v=4" width=40></a>
 <a href="https://github.com/nathanbaleeta"><img src="https://avatars2.githubusercontent.com/u/8824104?v=4" width=40></a>
