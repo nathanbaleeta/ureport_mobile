@@ -17,7 +17,7 @@ You can run this codelab using one of the following devices:
 - The [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator) or [iOS simulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-simulator).
 
 For macOS you'll also need:
-    - A Mac configured with Xcode.
+- A Mac configured with Xcode.
 
 
 ## Questions
