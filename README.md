@@ -6,7 +6,7 @@ A U-Report mobile application
 
 Our [wiki](https://github.com/unicef/ureport-mobile/wiki) has several pages of information for developers, and people contributing to ureport-mobile. Check it out for your authoritative source of information about the ureport-mobile community.
 
-## Set up your developement environment
+## Set up your development environment
 
 This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
 
