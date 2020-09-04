@@ -6,11 +6,16 @@ A U-Report mobile application
 
 Our [wiki](https://github.com/unicef/ureport-mobile/wiki) has several pages of information for developers, and people contributing to ureport-mobile. Check it out for your authoritative source of information about the ureport-mobile community.
 
-## Getting Started
+## Set up your developement environment
+
 This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
 
-- Install Flutter on your workstation. Depending on your OS, follow the specific [instructions](https://flutter.dev/docs/get-started/install).
-- Set up an editor of your choice ranging from Android Studio, Visual Studio Code to Emacs. Follow these [guidelines](https://flutter.dev/docs/get-started/install).
+You need two pieces of software to complete this lab: the [Flutter SDK](https://flutter.dev/docs/get-started/install) and an [editor](https://flutter.dev/docs/get-started/install). You can use your preferred editor, such as Android Studio or IntelliJ with the Flutter and Dart plugins installed, or Visual Studio Code with the [Dart Code and Flutter extensions](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
+
+You can run this codelab using one of the following devices:
+- A physical [Android device](https://flutter.dev/docs/get-started/install/macos#android-setup) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
+- The iOS simulator.
+
 - Create virtual devices using [AVD manager](https://developer.android.com/studio/run/managing-avds) to test drive your app during development. Maintain minimum API level of 24.
 
 ## Questions
