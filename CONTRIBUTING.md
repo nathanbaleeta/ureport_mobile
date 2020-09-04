@@ -22,18 +22,18 @@ ureport-mobile uses GitHub’s tracker called [Issues](https://github.com/unicef
 * One **assignee** is responsible for working on the issue at any given time.
 * **Comments** allow anyone with access to the repository to provide feedback.
 
-## Setting up your development environment
-You will need a [text editor](https://flutter.dev/docs/get-started/install) and an [phone emulator.](https://developer.android.com/studio/run/managing-avds)
+## Set up your development environment
 
 This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
 
-1. Install Flutter on your workstation. Depending on your OS, follow the specific [instructions](https://flutter.dev/docs/get-started/install).
-2. Set up an editor of your choice ranging from Android Studio, Visual Studio Code to Emacs. Follow these [guidelines](https://flutter.dev/docs/get-started/install).
-3. Create virtual devices using [AVD manager](https://developer.android.com/studio/run/managing-avds) to test drive your app during development. Maintain minimum API level of 24.
+You need two pieces of software to complete this setup: the [Flutter SDK](https://flutter.dev/docs/get-started/install) and an [editor](https://flutter.dev/docs/get-started/editor). You can use your preferred editor, such as Android Studio or IntelliJ with the Flutter and Dart plugins installed, or Visual Studio Code with the [Dart Code and Flutter extensions](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
 
-4. Clone the repo with `git clone https://github.com/unicef/unicef-mobile.git`
+You can test drive this app using one of the following devices:
+- A physical [Android device](https://flutter.dev/docs/get-started/install/macos#set-up-your-android-device) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
+- The [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator) or [iOS simulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-simulator).
 
-Once it is done, you can modify any file locally and test drive the app using the device emulator.
+For macOS you'll also need:
+- A Mac configured with Xcode.
 
 ## Coding formatting
 To be more productive as a team of developers we follow a single, shared style which is enforced through [automatic formatting](https://flutter.dev/docs/development/tools/formatting). Depending on your text editor, please follow the instructions below to configure automatic formatting:
