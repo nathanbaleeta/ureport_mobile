@@ -16,6 +16,10 @@ You can run this codelab using one of the following devices:
 - A physical [Android device](https://flutter.dev/docs/get-started/install/macos#set-up-your-android-device) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
 - The [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator) or [iOS simulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-simulator).
 
+For macOS you'll also need:
+    - A Mac configured with Xcode.
+
+
 ## Questions
 
 For questions and support please use the group chat. The [issue list](https://github.com/unicef/ureport-mobile/issues) of this repo is exclusively for bug reports and feature requests.
