@@ -16,8 +16,6 @@ You can run this codelab using one of the following devices:
 - A physical [Android device](https://flutter.dev/docs/get-started/install/macos#set-up-your-android-device) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
 - The [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator) or [iOS simulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-simulator).
 
-- Create virtual devices using [AVD manager](https://developer.android.com/studio/run/managing-avds) to test drive your app during development. Maintain minimum API level of 24.
-
 ## Questions
 
 For questions and support please use the group chat. The [issue list](https://github.com/unicef/ureport-mobile/issues) of this repo is exclusively for bug reports and feature requests.
