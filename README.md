@@ -10,7 +10,7 @@ Our [wiki](https://github.com/unicef/ureport-mobile/wiki) has several pages of i
 
 This is a starting point for new developers who wish to setup their development workstations' for Flutter mobile development.
 
-You need two pieces of software to complete this setup: the [Flutter SDK](https://flutter.dev/docs/get-started/install) and an [editor](https://flutter.dev/docs/get-started/install). You can use your preferred editor, such as Android Studio or IntelliJ with the Flutter and Dart plugins installed, or Visual Studio Code with the [Dart Code and Flutter extensions](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
+You need two pieces of software to complete this setup: the [Flutter SDK](https://flutter.dev/docs/get-started/install) and an [editor](https://flutter.dev/docs/get-started/editor). You can use your preferred editor, such as Android Studio or IntelliJ with the Flutter and Dart plugins installed, or Visual Studio Code with the [Dart Code and Flutter extensions](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
 
 You can test drive this app using one of the following devices:
 - A physical [Android device](https://flutter.dev/docs/get-started/install/macos#set-up-your-android-device) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
