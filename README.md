@@ -12,7 +12,7 @@ This is a starting point for new developers who wish to setup their development 
 
 You need two pieces of software to complete this lab: the [Flutter SDK](https://flutter.dev/docs/get-started/install) and an [editor](https://flutter.dev/docs/get-started/install). You can use your preferred editor, such as Android Studio or IntelliJ with the Flutter and Dart plugins installed, or Visual Studio Code with the [Dart Code and Flutter extensions](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code).
 
-You can run this codelab using one of the following devices:
+You can test drive this app using one of the following devices:
 - A physical [Android device](https://flutter.dev/docs/get-started/install/macos#set-up-your-android-device) or [iOS device](https://flutter.dev/docs/get-started/install/macos#deploy-to-ios-devices) connected to your computer.
 - The [Android emulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-android-emulator) or [iOS simulator](https://flutter.dev/docs/get-started/install/macos#set-up-the-ios-simulator).
 
