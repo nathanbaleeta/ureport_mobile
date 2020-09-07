@@ -47,17 +47,6 @@ void main() {
       expect(find.byIcon(Icons.chat), findsOneWidget);
     });
 
-    testWidgets('DefaultTabController tab-pressing callback validation', (WidgetTester tester) async {
-      ureport_app.main();
-      await tester.pump();
 
-      await tester.tap(findAppBarIcon(Icons.chat));
-      await tester.pumpAndSettle();
-      expect(findTabBarViewCard(Icons.chat), findsOneWidget);
-
-      await tester.tap(findAppBarIcon(Icons.equalizer));
-      await tester.pumpAndSettle();
-      expect(findTabBarViewCard(Icons.equalizer), findsOneWidget);
-    });
   });
 }
