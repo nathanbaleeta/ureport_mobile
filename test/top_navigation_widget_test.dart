@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ureport_app/main.dart' as ureport_app;
-import 'package:ureport_app/main.dart';
 
 Finder findAppBarIcon(IconData icon) {
   return find.descendant(of: find.byType(AppBar), matching: find.byIcon(icon));
