@@ -1,4 +1,4 @@
-# ureport-mobile
+# ureport_mobile
 
 A U-Report mobile application
 
