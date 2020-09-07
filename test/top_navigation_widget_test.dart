@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:ureport_app/main.dart' as ureport_app;
+import 'package:ureport_app/main.dart';
 
 Finder findAppBarIcon(IconData icon) {
   return find.descendant(of: find.byType(AppBar), matching: find.byIcon(icon));
@@ -14,16 +15,19 @@ void main() {
   // a group of widget tests for the top navigation bar
   group('Top Navigation Bar', () {
     testWidgets('validate top bar widget text', (WidgetTester tester) async {
+
       await tester.pumpWidget(MaterialApp(
         home: Scaffold(
           body: Text('U-Report'),
         ),
       ));
+
+
       expect(find.text('U-Report'), findsOneWidget);
     });
 
-    testWidgets(
-        'DefaultTabController icons validation', (WidgetTester tester) async {
+    testWidgets('DefaultTabController icons validation', (WidgetTester tester) async {
+
       await tester.pumpWidget(
         MaterialApp(
           home: DefaultTabController(
@@ -42,6 +46,7 @@ void main() {
           ),
         ),
       );
+
 
       expect(find.byIcon(Icons.equalizer), findsOneWidget);
       expect(find.byIcon(Icons.chat), findsOneWidget);
