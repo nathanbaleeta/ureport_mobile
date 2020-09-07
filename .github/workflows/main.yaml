@@ -6,7 +6,7 @@ on: [push,pull_request]
 jobs:
   test:
     #The type of machine to run the job on. [windows,macos, ubuntu , self-hosted]
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     #sequence of tasks called
     steps:
       # The branch or tag ref that triggered the workflow will be checked out.
@@ -23,14 +23,3 @@ jobs:
       - run: flutter  analyze
       # run  flutter widgets tests  and unit tests
       - run: flutter test --coverage
-      # build Android version
-      - run: flutter build apk --debug --split-per-abi
-      # Upload coverage reports to Codecov
-      # https://github.com/marketplace/actions/codecov
-      # This action will create a github release and optionally upload an artifact to it.
-      # https://github.com/ncipollo/release-action
-      - name: Create a Release APK
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "build/app/outputs/apk/debug/*.apk,build/macos/Build/Products/Release/*.app"
-          token: ${{ secrets.GITHUB_TOKEN }}
