@@ -10,6 +10,9 @@ class UReportApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: _title,
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+      ),
       home: TabScreen(),
     );
   }
@@ -25,7 +28,7 @@ class TabScreen extends StatefulWidget {
 class _TabScreenState extends State<TabScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
       'Index 0: Poll',
@@ -48,6 +51,7 @@ class _TabScreenState extends State<TabScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('U-Report'),
+        backgroundColor: Colors.grey[50],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
