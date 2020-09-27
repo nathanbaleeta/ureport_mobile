@@ -3,7 +3,8 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ureport_app/main.dart' as ureport_app;
 
 Finder findBottomNavigationIcon(IconData icon) {
-  return find.descendant(of: find.byType(BottomNavigationBar), matching: find.byIcon(icon));
+  return find.descendant(
+      of: find.byType(BottomNavigationBar), matching: find.byIcon(icon));
 }
 
 void main() {
@@ -16,7 +17,6 @@ void main() {
         ),
       ));
       expect(find.text('U-Report'), findsOneWidget);
-
     });
 
     testWidgets('validate color for app bar', (WidgetTester tester) async {
@@ -28,8 +28,11 @@ void main() {
 
       expect((tester.widget(find.byType(Material)) as Material).color,
           Colors.grey[50]);
+    });
 
-    testWidgets('Bottom Navigation Bar icons and text validation with tab-pressing validation', (WidgetTester tester) async {
+    testWidgets(
+        'Bottom Navigation Bar icons and text validation with tab-pressing validation',
+        (WidgetTester tester) async {
       ureport_app.main();
       await tester.pump();
 
@@ -37,7 +40,7 @@ void main() {
       await tester.pumpAndSettle();
       expect(find.text('Stories'), findsOneWidget);
       expect(findBottomNavigationIcon(Icons.chat), findsOneWidget);
-      
+
       await tester.tap(findBottomNavigationIcon(Icons.equalizer));
       await tester.pumpAndSettle();
       expect(find.text('Poll'), findsOneWidget);
