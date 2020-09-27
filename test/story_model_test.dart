@@ -8,16 +8,5 @@ void main() {
 }
 
 void verifyTestData() {
-  Story story = new Story();
-  story.id = 1;
-  story.title = 'Testing';
-  story.featured = true;
-  story.summary = '';
-
-  expect(story.id, equals(1));
-  expect(story.title.toString(), equals('Testing'));
-  expect(story.featured.toString(), equals('true'));
-  expect(story.summary.toString(), equals(''));
-
 
 }

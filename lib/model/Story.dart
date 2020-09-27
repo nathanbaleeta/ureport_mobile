@@ -1,20 +1,8 @@
 class Story {
-  int id;
-  String title;
-  bool featured;
-  String summary;
+  final int id;
+  final String title;
+  final String picture;
 
-  // Constructor
-  Story({this.id, this.title, this.featured, this.summary});
+  Story(this.id, this.title, this.picture);
 
-  factory Story.fromJson(Map<String, dynamic> json) {
-    return Story(
-      id: json['id'],
-      title: json['title'],
-      featured: json['featured'],
-      summary: json['summary'],
-
-    );
-  }
 }
-
