@@ -4,9 +4,11 @@ import 'dart:convert';
 import 'package:ureport_app/stories/Story.dart';
 
 class StoryConverter {
+  static final String organizationURL = "https://ureport.in/api/v1/stories/org/1/?format=json";
+
   Future<List<Story>> getStories() async {
 
-    var data = await http.get("https://ureport.in/api/v1/stories/org/1/?format=json");
+    var data = await http.get(organizationURL);
     var jsonData = json.decode(data.body);
     print(jsonData);
 
