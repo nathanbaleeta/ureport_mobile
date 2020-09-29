@@ -44,7 +44,6 @@ class StoryListView extends StatelessWidget {
                     Navigator.push(context,
                         new MaterialPageRoute(builder: (context) => StoryDetail(snapshot.data[id]))
                     );
-
                   },
                 );
               },
