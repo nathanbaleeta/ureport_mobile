@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-//import 'package:ureport_app/stories/StoryDetail.dart';
-import 'package:ureport_app/stories/StoryConverter.dart';
+import 'package:ureport_app/stories/StoryListView.dart';
 
 class TabScreen extends StatefulWidget {
   TabScreen({Key key}) : super(key: key);
@@ -10,31 +9,19 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
+
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
   TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static const List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Poll',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 1: Stories',
-      style: optionStyle,
-    ),
-  ];
+  static List<Widget> _widgetOptions = <Widget>[
+    Text('Polls'),
+    StoryListView()
+      ];
 
   void _onItemTapped(int index) {
     setState(() {
       _selectedIndex = index;
     });
-  }
-
-  var converter = new StoryConverter();
-
-  getStoriesData() async {
-    var stories = await converter.getStories();
-    return stories;
   }
 
   @override
