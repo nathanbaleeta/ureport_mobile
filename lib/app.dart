@@ -28,8 +28,9 @@ class _TabScreenState extends State<TabScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('U-Report'),
-        backgroundColor: Colors.grey[50],
+        title: const Text('U-Report',
+        style: TextStyle(color: Colors.black)),
+        backgroundColor: Colors.grey[400],
       ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
