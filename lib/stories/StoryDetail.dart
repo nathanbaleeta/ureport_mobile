@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/Story.dart';
 
+// Incomplete, to be updated based on Figma designs
+
 class StoryDetail extends StatelessWidget {
   final Story story; //id, title, picture
 
