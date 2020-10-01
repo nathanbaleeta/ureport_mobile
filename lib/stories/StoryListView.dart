@@ -32,19 +32,24 @@ class StoryListView extends StatelessWidget {
             return ListView.builder(
               itemCount: snapshot.data.length,
               itemBuilder: (BuildContext context, int id) {
-                return ListTile(
+
+                return Card(
+                  color: Colors.grey[80],
+                  child: ListTile(
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
                         snapshot.data[id].picture
                     ),
                   ),
                   title: Text(snapshot.data[id].title),
+                  //sselected: true,
                   onTap: (){
 
                     Navigator.push(context,
                         new MaterialPageRoute(builder: (context) => StoryDetail(snapshot.data[id]))
                     );
                   },
+                )
                 );
               },
             );
