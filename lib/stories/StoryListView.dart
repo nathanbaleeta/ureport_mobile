@@ -2,8 +2,25 @@ import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/StoryConverter.dart';
 import 'package:ureport_app/stories/StoryDetail.dart';
 
-class StoryListView extends StatelessWidget {
+/* TODO:
+ * - Story tags functionality
+ * - Change font, colors according to app theme
+ */
+
+class StoryListView extends StatefulWidget {
+  @override
+  _StoryListViewState createState() => _StoryListViewState();
+}
+
+class _StoryListViewState extends State<StoryListView> {
   final converter = new StoryConverter();
+  String tag = "all";
+
+  @override
+  void initState() {
+    getStoriesData();
+    super.initState();
+  }
 
   getStoriesData() async {
     var stories = await converter.getStories();
@@ -12,94 +29,134 @@ class StoryListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.grey,
-      child: FutureBuilder(
-        future: getStoriesData(),
-        builder: (BuildContext context, AsyncSnapshot snapshot) {
-          print(snapshot.data);
-          if (snapshot.data == null) {
-            return Container(
-                child: Center(
-                    child: SizedBox(
-              child: CircularProgressIndicator(),
-              width: 30,
-              height: 30,
-            )));
-          } else {
-            return ListView.builder(
-              itemCount: snapshot.data.length,
-              itemBuilder: (BuildContext context, int id) {
-                return GestureDetector(
-                  onTap: () {
-                    Navigator.push(
-                        context,
-                        new MaterialPageRoute(
-                            builder: (context) =>
-                                StoryDetail(snapshot.data[id])));
-                  },
-                  child: Container(
-                    padding: EdgeInsets.all(10),
-                    color: Colors.grey.shade200,
+    return FutureBuilder(
+      future: getStoriesData(),
+      builder: (BuildContext context, AsyncSnapshot snapshot) {
+        print(snapshot.data);
+        if (snapshot.data == null) {
+          return Container(
+              child: Center(
+                  child: SizedBox(
+            child: CircularProgressIndicator(),
+            width: 30,
+            height: 30,
+          )));
+        } else {
+          return Column(
+            children: [
+              Container(
+                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                color: Colors.grey.shade200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "SORT BY: ",
+                      style: TextStyle(fontSize: 16, color: Colors.black),
+                    ),
+                    SizedBox(width: 10),
+                    filterDropdown()
+                  ],
+                ),
+              ),
+              //SizedBox(height: 30),
+              Expanded(
+                  child: ListView.builder(
+                itemCount: snapshot.data.length,
+                itemBuilder: (BuildContext context, int id) {
+                  return GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          new MaterialPageRoute(
+                              builder: (context) =>
+                                  StoryDetail(snapshot.data[id])));
+                    },
                     child: Container(
-                      color: Colors.white,
-                      padding: EdgeInsets.all(10),
-                      child: Column(
-                        children: [
-                          Row(
-                            children: [
-                              Container(
-                                padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                                color: Colors.blue.shade300,
-                                child: Text(
-                                  "CATEGORY",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.white),
+                      padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                      color: Colors.grey.shade200,
+                      child: Container(
+                        color: Colors.white,
+                        padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                        child: Column(
+                          children: [
+                            Row(
+                              children: [
+                                Container(
+                                  padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                  color: Colors.blue.shade300,
+                                  child: Text(
+                                    "CATEGORY",
+                                    style: TextStyle(
+                                        fontSize: 20, color: Colors.white),
+                                  ),
                                 ),
-                              ),
-                              Expanded(child: SizedBox()),
-                              Icon(Icons.forward), // TODO: Get the right icon
-                            ],
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Text(
-                            snapshot.data[id].title,
-                            style: TextStyle(fontSize: 18),
-                            textAlign: TextAlign.center,
-                          ),
-                          SizedBox(height: 10),
-                          Image(
-                            image: NetworkImage(snapshot.data[id].picture),
-                          )
-                        ],
+                                Expanded(child: SizedBox()),
+                                Image(
+                                  image: AssetImage('lib/stories/share.png'),
+                                  width: 30,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Text(
+                              snapshot.data[id].title,
+                              style: TextStyle(fontSize: 18),
+                              textAlign: TextAlign.center,
+                            ),
+                            SizedBox(height: 10),
+                            Image(
+                              image: NetworkImage(snapshot.data[id].picture),
+                            )
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                );
-                /* return Card(
-                    color: Colors.grey[80],
-                    child: ListTile(
-                      leading: CircleAvatar(
-                        backgroundImage:
-                            NetworkImage(snapshot.data[id].picture),
-                      ),
-                      title: Text(snapshot.data[id].title),
-                      //sselected: true,
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            new MaterialPageRoute(
-                                builder: (context) =>
-                                    StoryDetail(snapshot.data[id])));
-                      },
-                    ));*/
-              },
-            );
-          }
-        },
-      ),
+                  );
+                },
+              )),
+            ],
+          );
+        }
+      },
+    );
+  }
+
+  filterDropdown() {
+    return DropdownButton(
+      hint: new Text('Select type'),
+      value: tag,
+      icon: Icon(Icons.keyboard_arrow_down),
+      iconSize: 18,
+      elevation: 16,
+      style: TextStyle(color: Colors.blue, fontSize: 18),
+      items: <DropdownMenuItem>[
+        new DropdownMenuItem(
+          child: new Text('all'),
+          value: "all",
+        ),
+        new DropdownMenuItem(
+          child: new Text('TAG 1'),
+          value: "TAG 1",
+        ),
+        new DropdownMenuItem(
+          child: new Text('TAG 2'),
+          value: "TAG 2",
+        ),
+        new DropdownMenuItem(
+          child: new Text('TAG 3'),
+          value: "TAG 3",
+        ),
+        new DropdownMenuItem(
+          child: new Text('TAG 4'),
+          value: "TAG 4",
+        ),
+      ],
+      onChanged: (value) => setState(() {
+        tag = value;
+      }),
     );
   }
 }
