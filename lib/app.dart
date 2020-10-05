@@ -16,7 +16,7 @@ class _TabScreenState extends State<TabScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     Text('Polls'),
     StoryListView()
-      ];
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -27,14 +27,6 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('U-Report',
-        style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.grey[400],
-      ),
-      body: Center(
-        child: _widgetOptions.elementAt(_selectedIndex),
-      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -50,6 +42,81 @@ class _TabScreenState extends State<TabScreen> {
         selectedItemColor: Colors.amber[800],
         onTap: _onItemTapped,
       ),
+      body: CustomScrollView(
+        slivers: <Widget>[
+        SliverAppBar(
+          leadingWidth: 100,
+          leading: Row(
+              mainAxisSize: MainAxisSize.max,
+              children: [
+            IconButton(
+              icon: Image.asset('assets/UIcon.png'),
+              onPressed: () {},
+            ),
+                InkWell(
+                    child:SizedBox(
+                      height: 20,
+                      width:30,
+                      child: Container(
+                        decoration: BoxDecoration(
+                        color: Colors.blue,
+                        ),
+                        child: Padding(
+                          padding: EdgeInsets.all(1.0),
+                          child:Text(
+                            'ENG',
+                            textAlign: TextAlign.right,
+                            style: TextStyle(
+                              color: Colors.white,
+
+                            ),
+
+                          ),
+                        )
+
+                    )
+                  ),
+                )
+          ]),
+
+          title: Text('U-Report',
+          style: TextStyle(color: Colors.black)),
+          centerTitle: true,
+          floating: true,
+          pinned: false,
+          snap: false,
+          backgroundColor: Colors.grey[50],
+
+
+          actions: <Widget>[
+            IconButton(
+              icon: Icon(Icons.settings),
+              tooltip: 'Settings',
+              onPressed: (){},
+            ),
+          ],
+        ),
+
+
+        SliverFillRemaining(
+          child: _widgetOptions.elementAt(_selectedIndex),
+
+        ),
+        ],
+
+
+
+      ),
+
+
     );
   }
 }
+//Center(child: _widgetOptions.elementAt(_selectedIndex),
+//         ),
+
+// appBar: AppBar(
+// title: const Text('U-Report',
+// style: TextStyle(color: Colors.black)),
+// backgroundColor: Colors.grey[400],
+// ),
