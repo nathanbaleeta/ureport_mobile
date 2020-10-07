@@ -2,11 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/StoryConverter.dart';
 import 'package:ureport_app/stories/StoryDetail.dart';
 
-/* TODO:
- * - Story tags functionality
- * - Change font, colors according to app theme
- */
-
 class StoryListView extends StatefulWidget {
   @override
   _StoryListViewState createState() => _StoryListViewState();
@@ -46,18 +41,38 @@ class _StoryListViewState extends State<StoryListView> {
             children: [
               Container(
                 padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                color: Colors.grey.shade200,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    Text(
-                      "SORT BY: ",
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
-                    SizedBox(width: 10),
-                    filterDropdown()
-                  ],
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage('lib/stories/appBar_background.png'),
+                    fit: BoxFit.cover,
+                  ),
                 ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    FittedBox(
+                      fit: BoxFit.contain,
+                      child: Image(
+                        image:
+                            AssetImage('lib/stories/ureport_default_logo.png'),
+                      ),
+                    ),
+                    SizedBox(width: 130),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: Row(
+                        children: [
+                          Text(
+                            "SORT BY: ",
+                            style: TextStyle(fontSize: 16, color: Colors.black),
+                          ),
+                          SizedBox(width: 10),
+                          filterDropdown()
+                        ],
+                      ),
+                    ),
+                  ],
+                ), //Row for combining drop down menu and sort by text
               ),
               //SizedBox(height: 30),
               Expanded(

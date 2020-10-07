@@ -12,7 +12,26 @@ class StoryDetail extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text(story.title),
-        )
-    );
+        ),
+
+
+        body:
+
+
+
+        Card(
+          child:
+            Container(
+              padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+              color: Colors.grey.shade200,
+              child: Image(
+                  image: NetworkImage(story.picture)),
+            ),
+
+          ),
+        );
+
+
+
   }
 }
