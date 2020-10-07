@@ -79,14 +79,22 @@ class _TabScreenState extends State<TabScreen> {
                 )
           ]),
 
-          title: Text('U-Report',
+          title: Text('',
           style: TextStyle(color: Colors.black)),
-          centerTitle: true,
+          centerTitle: false,
           floating: true,
           pinned: false,
           snap: false,
-          backgroundColor: Colors.grey[50],
-
+          flexibleSpace: Container(
+            decoration:
+            BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('assets/appBarBackground.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          backgroundColor: Colors.transparent,
 
           actions: <Widget>[
             IconButton(
