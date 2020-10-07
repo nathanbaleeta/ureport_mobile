@@ -37,8 +37,6 @@ void main() {
       await tester.pump();
 
       await tester.tap(findBottomNavigationIcon(Icons.chat));
-      await tester.pumpAndSettle();
-      expect(find.text('Stories'), findsOneWidget);
       expect(findBottomNavigationIcon(Icons.chat), findsOneWidget);
 
       await tester.tap(findBottomNavigationIcon(Icons.equalizer));
