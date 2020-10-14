@@ -122,8 +122,11 @@ class _StoryListViewState extends State<StoryListView> {
                               textAlign: TextAlign.center,
                             ),
                             SizedBox(height: 10),
-                            Image(
-                              image: NetworkImage(snapshot.data[id].picture),
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(20.0),
+                              child: Image(
+                                image: NetworkImage(snapshot.data[id].picture),
+                              ),
                             )
                           ],
                         ),
