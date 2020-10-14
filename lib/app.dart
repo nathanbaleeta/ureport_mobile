@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
@@ -10,14 +9,10 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
-
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static List<Widget> _widgetOptions = <Widget>[
-    Text('Polls'),
-    StoryListView()
-      ];
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static List<Widget> _widgetOptions = <Widget>[Text('Polls'), StoryListView()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -39,11 +34,11 @@ class _TabScreenState extends State<TabScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.equalizer),
-            title: Text('Poll'),
+            label: 'Poll',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
-            title: Text('Stories'),
+            label: 'Stories',
           ),
         ],
         currentIndex: _selectedIndex,

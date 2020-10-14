@@ -40,6 +40,21 @@ class _StoryListViewState extends State<StoryListView> {
           return Column(
             children: [
               Container(
+                color: Colors.grey.shade200,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      "SORT BY: ",
+                      style: TextStyle(fontSize: 16, color: Colors.black),
+                    ),
+                    SizedBox(width: 10),
+                    filterDropdown(),
+                    SizedBox(width: 20),
+                  ],
+                ),
+              ),
+              /* Container(
                 padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
                 decoration: BoxDecoration(
                   image: DecorationImage(
@@ -73,8 +88,7 @@ class _StoryListViewState extends State<StoryListView> {
                     ),
                   ],
                 ), //Row for combining drop down menu and sort by text
-              ),
-              //SizedBox(height: 30),
+              ), */
               Expanded(
                   child: ListView.builder(
                 itemCount: snapshot.data.length,
