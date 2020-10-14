@@ -23,7 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+#The following adds the Provider Package which allows for multiple themes.
+  provider: ^4.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -78,3 +79,18 @@ flutter:
   assets:
     - assets/UIcon.png
     - assets/appBarBackground.png
+    - assets/argentina.png
+    - assets/bangladesh.png
+    - assets/belize.png
+    - assets/bolvia.png
+    - assets/bosnia_and_herzegovina.png
+    - assets/botswana.png
+    - assets/brasil.png
+    - assets/bulgaria.png
+    - assets/burkina_faso.png
+    - assets/burundi.png
+    - assets/cameroun.png
+    - assets/republique_centrafricaine.png
+    - assets/chile.png
+    - assets/congo_brazzaville.png
+    - assets/lebanon.png

@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/app.dart';
+import 'package:ureport_app/theme/theme.dart';
+import 'package:ureport_app/theme/theme_notifier.dart';
+import 'package:provider/provider.dart';
 
-void main() => runApp(UReportApp());
+void main() => runApp(
+  ChangeNotifierProvider<ThemeNotifier>(
+    create: (_) => ThemeNotifier(mainTheme),
+    child: UReportApp(),
+),
+);
+
 
 /// This Widget is the main application widget.
 class UReportApp extends StatelessWidget {
@@ -9,11 +18,10 @@ class UReportApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeNotifier = Provider.of<ThemeNotifier>(context);
     return MaterialApp(
       title: _title,
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-      ),
+      theme: themeNotifier.getTheme(),
       home: TabScreen(),
     );
   }
