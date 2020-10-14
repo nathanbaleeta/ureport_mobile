@@ -45,7 +45,7 @@ class _TabScreenState extends State<TabScreen> {
       body: CustomScrollView(
         slivers: <Widget>[
         SliverAppBar(
-          leadingWidth: 100,
+          // leadingWidth: 100,
           leading: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -120,6 +120,88 @@ class _TabScreenState extends State<TabScreen> {
     );
   }
 }
+
+class RegistrationScreen extends StatefulWidget {
+  RegistrationScreen({Key key}) : super(key: key);
+
+  @override
+  _RegistrationScreenState createState() => _RegistrationScreenState();
+}
+
+class _RegistrationScreenState extends State<RegistrationScreen> {
+  TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
+  final myPhone = TextEditingController();
+
+  @override
+  void dispose() {
+    // Clean up the controller when the widget is disposed.
+    myPhone.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final phoneField = TextField(
+      controller: myPhone,
+      obscureText: false,
+      style: style,
+      decoration: InputDecoration(
+          contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+          hintText: "Phone",
+          border:
+          OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
+    );
+    final signUpButton = Material(
+      elevation: 5.0,
+      borderRadius: BorderRadius.circular(30.0),
+      color: Colors.yellow,
+      child: MaterialButton(
+        minWidth: MediaQuery.of(context).size.width,
+        padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
+        onPressed: () {
+          print("User Phone is " + myPhone.text);
+          TabScreen();
+        },
+        child: Text("Sign Up",
+            textAlign: TextAlign.center,
+            style: style.copyWith(
+                color: Colors.black, fontWeight: FontWeight.bold)),
+      ),
+    );
+
+    return Scaffold(
+      body: Center(
+        child: Container(
+          color: Colors.white,
+          child: Padding(
+            padding: const EdgeInsets.all(36.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(
+                  height: 155.0,
+                  child: Image.asset(
+                    "assets/UIcon.png",
+                    fit: BoxFit.contain,
+                  ),
+                ),
+                SizedBox(height: 45.0),
+                phoneField,
+                SizedBox( height: 35.0),
+                signUpButton,
+                SizedBox(
+                  height: 15.0,
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
 //Center(child: _widgetOptions.elementAt(_selectedIndex),
 //         ),
 

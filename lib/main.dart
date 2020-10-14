@@ -9,12 +9,26 @@ class UReportApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      theme: ThemeData(
-        primarySwatch: Colors.lightBlue,
-      ),
-      home: TabScreen(),
-    );
+    const bool showLogin = true; // soon to be changed with stateful UReportApp
+
+    switch(showLogin) {
+      case true:
+        return MaterialApp(
+          title: _title,
+          theme: ThemeData(
+            primarySwatch: Colors.lightBlue,
+          ),
+          home: RegistrationScreen(),
+        );
+        break;
+      case false: default:
+      return MaterialApp(
+        title: _title,
+        theme: ThemeData(
+          primarySwatch: Colors.lightBlue,
+        ),
+        home: TabScreen(),
+      );
+    }
   }
 }
