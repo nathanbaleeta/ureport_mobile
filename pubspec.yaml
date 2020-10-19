@@ -77,20 +77,4 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/UIcon.png
-    - assets/appBarBackground.png
-    - assets/argentina.png
-    - assets/bangladesh.png
-    - assets/belize.png
-    - assets/bolvia.png
-    - assets/bosnia_and_herzegovina.png
-    - assets/botswana.png
-    - assets/brasil.png
-    - assets/bulgaria.png
-    - assets/burkina_faso.png
-    - assets/burundi.png
-    - assets/cameroun.png
-    - assets/republique_centrafricaine.png
-    - assets/chile.png
-    - assets/congo_brazzaville.png
-    - assets/lebanon.png
+    - assets/
