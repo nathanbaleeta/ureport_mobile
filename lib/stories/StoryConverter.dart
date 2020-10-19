@@ -17,7 +17,7 @@ class StoryConverter {
 
     for (var u in jsonData['results']) {
       Story story = Story(u["id"], u["title"], u["category"]["image_url"],
-          u["summary"], u["tags"], u["category"]["name"]);
+          u["summary"], u["tags"], u["category"]["name"], u["content"]);
       stories.add(story);
     }
 

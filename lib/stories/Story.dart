@@ -5,7 +5,8 @@ class Story {
   final String summary;
   final String tags;
   final String category;
+  final String content;
 
   Story(this.id, this.title, this.picture, this.summary, this.tags,
-      this.category);
+      this.category, this.content);
 }

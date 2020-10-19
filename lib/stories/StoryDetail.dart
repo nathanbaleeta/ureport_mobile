@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_from_html_core/flutter_widget_from_html_core.dart';
 import 'package:ureport_app/stories/Story.dart';
 
 // Incomplete, to be updated based on Figma designs
@@ -32,10 +33,12 @@ class StoryDetail extends StatelessWidget {
                     ),
                   ),
                   Expanded(child: SizedBox()),
-                  Image(
-                    image: AssetImage('lib/stories/share.png'),
-                    width: 30,
-                  ),
+                  story.content == null
+                      ? Container()
+                      : Image(
+                          image: AssetImage('lib/stories/share.png'),
+                          width: 30,
+                        ),
                 ],
               ),
               SizedBox(
@@ -56,11 +59,14 @@ class StoryDetail extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Text(
-                story.summary,
-                style: TextStyle(fontSize: 16),
-                textAlign: TextAlign.left,
-              ),
+              story.content == null
+                  ? Container()
+                  : HtmlWidget(
+                      story.content,
+                      textStyle: TextStyle(
+                        fontSize: 16,
+                      ),
+                    )
             ],
           ),
         ),

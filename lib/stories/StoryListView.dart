@@ -183,28 +183,6 @@ class _StoryListViewState extends State<StoryListView> {
           child: Text(value),
         );
       }).toList(),
-      /* <DropdownMenuItem>[
-        new DropdownMenuItem(
-          child: new Text('all'),
-          value: "all",
-        ),
-        new DropdownMenuItem(
-          child: new Text('TAG 1'),
-          value: "TAG 1",
-        ),
-        new DropdownMenuItem(
-          child: new Text('TAG 2'),
-          value: "TAG 2",
-        ),
-        new DropdownMenuItem(
-          child: new Text('TAG 3'),
-          value: "TAG 3",
-        ),
-        new DropdownMenuItem(
-          child: new Text('TAG 4'),
-          value: "TAG 4",
-        ),
-      ], */
       onChanged: (value) => setState(() {
         category = value;
       }),
