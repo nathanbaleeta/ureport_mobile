@@ -23,7 +23,7 @@ class UReportAppBar extends StatelessWidget{
                   width:30,
                   child: Container(
                       decoration: BoxDecoration(
-                        color: Theme.of(context).buttonColor,
+                        color: Theme.of(context).accentColor,
                       ),
                       child: Padding(
                         padding: EdgeInsets.all(1.0),
