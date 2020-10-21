@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/theme/theme_changer_page.dart';
+import 'package:provider/provider.dart';
+import 'package:ureport_app/theme/theme_notifier.dart';
 
 class UReportAppBar extends StatelessWidget{
   @override
@@ -11,7 +13,7 @@ class UReportAppBar extends StatelessWidget{
           mainAxisSize: MainAxisSize.max,
           children: [
             IconButton(
-              icon: Image.asset('assets/UIcon.png'),
+              icon: Image.asset('assets/LargeUreportIcon.png'),
               onPressed: () {Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => ThemeChangerPage()),

@@ -1,13 +1,24 @@
 import 'package:flutter/material.dart';
 //Dynamic Theme Changes based on Country
 //changing subtitle and accent color
+//
+// class UReportTheme extends ChangeNotifier{
+//   String iconImage;
+//   String get icon => iconImage;
+//   set icon(String imageString){
+//     iconImage= imageString;
+//     notifyListeners();
+//   }
+// }
+
+
+
 final mainTheme = ThemeData(
   primarySwatch: Colors.amber,
   primaryColor: HexColor('#FFD100'),//yellow boxes
   brightness: Brightness.light,
   backgroundColor: HexColor('#FFFFFF'),//white background
   accentColor: HexColor('#43B3F2'),//blue boxes
-
   primaryIconTheme: IconThemeData(color: Colors.black), //icons
   primaryTextTheme: TextTheme(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text

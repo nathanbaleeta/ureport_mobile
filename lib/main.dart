@@ -5,10 +5,14 @@ import 'package:ureport_app/theme/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(
-  ChangeNotifierProvider<ThemeNotifier>(
-    create: (_) => ThemeNotifier(mainTheme),
-    child: UReportApp(),
-),
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider<ThemeNotifier>(
+        create: (_) => ThemeNotifier(mainTheme, 'assets/LargeUreportIcon.png'),
+      ),
+    ],
+      child: UReportApp(),
+  ),
 );
 
 
