@@ -22,48 +22,57 @@ class UReportApp extends StatefulWidget {
 class _UReportAppState extends State<UReportApp> {
   @override
   void initState() {
-    String fcm_Token = '';
     super.initState();
-    _firebaseMessaging.getToken().then((token) {
-      print(token);
-      fcm_Token = token;
-    });
-    //registerContact(fcm_Token);
+
+    String name = "Test";
+
+    String urn = "7143111584";
+    registerContact(name, urn);
   }
 
-  static final String rapidPro =
+  String rapidPro =
       "https://app.rapidpro.io/c/fcm/e3717783-c723-4f78-876d-755318704c89/register";
 
-  void registerContact(String token) async {
-    print("I went here");
+  void registerContact(String name, String urn) async {
+    String fcm_token;
+    await _firebaseMessaging.getToken().then((token) {
+      fcm_token = token;
+    });
+
+    String url = rapidPro +
+        "?fcm_token=" +
+        fcm_token +
+        "&name=" +
+        name +
+        "&urn=" +
+        urn +
+        "&";
     Map<String, String> headers = {
       "Authorization": "Token 9a3970ab2bb7def48c69bce852f93b80d2d02d61",
       "Content-Type": "application/json"
     };
-    Map<String, String> body = {
-      "name": "Henry Adams",
-      "language": "eng",
-      "urns": "tel:+256772738552",
-      "groups": "19200d4d-6eb9-4790-9a5b-560ab49c1e6a"
-    };
-    String encodedBody = jsonEncode(body);
-    var queryParameters = {"urn": "tel:+256772738552", "fcm_token": token};
+    // Map<String, String> body = {
+    //   "name": "Henry Adams",
+    //   "language": "eng",
+    //   "urns": "tel:+256772738552",
+    //   "groups": "19200d4d-6eb9-4790-9a5b-560ab49c1e6a"
+    // };
+    //String encodedBody = jsonEncode(body);
+    //var queryParameters = {"urn": "+256772738552", "fcm_token": token};
 
     //var uri = Uri.https(rapidPro, ,queryParameters );
 
-    http.Response response =
-        await http.post(rapidPro, headers: headers, body: encodedBody);
-    //print("done");
-    //print(response.toString());
-    if (response.statusCode == 202) {
-      print("Did it successfully");
+    http.Response response = await http.post(url, headers: headers);
 
-      //return User.fromJson(jsonDecode(response.body));
-    } else {
-      print(response.statusCode);
-      print(response.toString());
-      throw Exception('Failed to register user.');
-    }
+    // if (response.statusCode == 202) {
+    //   print("Did it successfully");
+
+    //   //return User.fromJson(jsonDecode(response.body));
+    // } else {
+    //   print(response.statusCode);
+    //   print(response.toString());
+    //   throw Exception('Failed to register user.');
+    // }
   }
 
   @override
