@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
@@ -45,7 +46,7 @@ class _TabScreenState extends State<TabScreen> {
       body: CustomScrollView(
         slivers: <Widget>[
         SliverAppBar(
-          // leadingWidth: 100,
+          leadingWidth: 100,
           leading: Row(
               mainAxisSize: MainAxisSize.max,
               children: [
@@ -121,6 +122,7 @@ class _TabScreenState extends State<TabScreen> {
   }
 }
 
+
 class RegistrationScreen extends StatefulWidget {
   RegistrationScreen({Key key}) : super(key: key);
 
@@ -130,24 +132,96 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
-  final myPhone = TextEditingController();
+  final _phoneController = TextEditingController();
+  final _codeController = TextEditingController();
+
+  Future registerUser(String mobile, BuildContext context) async{
+
+    FirebaseAuth _auth = FirebaseAuth.instance;
+
+    _auth.verifyPhoneNumber(
+        phoneNumber: mobile,
+        timeout: Duration(seconds: 60),
+        verificationCompleted: (AuthCredential credential){
+          _auth.signInWithCredential(credential).then((AuthResult result){
+            Navigator.pushReplacement(context, MaterialPageRoute(
+                builder: (context) => TabScreen()
+            ));
+          }).catchError((e){
+            print(e);
+          });
+        },
+        verificationFailed: (AuthException authException){
+          print(authException.message);
+        },
+        codeSent: (String verificationId, [int forceResendingToken]) {
+          // grab input from the user
+          showDialog(
+              context: context,
+              barrierDismissible: false,
+              builder: (context) => AlertDialog(
+                title: Text("Enter SMS Verification Code:"),
+                content: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    TextField(
+                      controller: _codeController,
+                    ),
+                  ],
+                ),
+                actions: <Widget>[
+                  FlatButton(
+                    child: Text("Done"),
+                    textColor: Colors.white,
+                    color: Colors.blueAccent,
+                    onPressed: () {
+                      final smsCode = _codeController.text.trim();
+
+                      FirebaseAuth auth = FirebaseAuth.instance;
+
+                      AuthCredential _credential = PhoneAuthProvider.getCredential(verificationId: verificationId, smsCode: smsCode);
+
+                      auth.signInWithCredential(_credential).then((AuthResult result){
+                        Navigator.pushReplacement(context, MaterialPageRoute(
+                            builder: (context) => TabScreen()
+                        ));
+                      }).catchError((e){
+                        print(e);
+                      });
+                    },
+                  )
+                ],
+              )
+          );
+
+        },
+        codeAutoRetrievalTimeout: (String verificationId) {
+          verificationId = verificationId;
+          print(verificationId);
+          print("Verification Timeout");
+        }
+    );
+  }
 
   @override
   void dispose() {
     // Clean up the controller when the widget is disposed.
-    myPhone.dispose();
+    _phoneController.dispose();
+    _codeController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
     final phoneField = TextField(
-      controller: myPhone,
+      controller: _phoneController,
       obscureText: false,
       style: style,
       decoration: InputDecoration(
           contentPadding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
-          hintText: "Phone",
+          hintText: "Mobile Phone: +13031234567",
+          filled: true,
+          fillColor: Colors.grey[100],
           border:
           OutlineInputBorder(borderRadius: BorderRadius.circular(32.0))),
     );
@@ -159,8 +233,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         minWidth: MediaQuery.of(context).size.width,
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
-          print("User Phone is " + myPhone.text);
-          TabScreen();
+          final mobile = _phoneController.text.trim();
+          registerUser(mobile, context);
         },
         child: Text("Sign Up",
             textAlign: TextAlign.center,

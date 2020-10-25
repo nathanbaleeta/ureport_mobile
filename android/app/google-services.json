@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "908121019780",
+    "firebase_url": "https://u-report-813ba.firebaseio.com",
+    "project_id": "u-report-813ba",
+    "storage_bucket": "u-report-813ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:908121019780:android:b7ac26b002ddbdc457b9d1",
+        "android_client_info": {
+          "package_name": "org.unicef.ureport_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "908121019780-l53j0cn3gsbj9esa5o32n84mhp339plo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChB-eHgZwLXvoNUe5C7DKT_tCLw8arqCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "908121019780-l53j0cn3gsbj9esa5o32n84mhp339plo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "908121019780-fijc8p7kp0mg3853mmm3b34voqbnp1d2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.unicef.ureport"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
