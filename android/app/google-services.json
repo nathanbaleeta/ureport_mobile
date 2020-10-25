@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "192213840653",
+    "firebase_url": "https://ureport-mobile-fcm.firebaseio.com",
+    "project_id": "ureport-mobile-fcm",
+    "storage_bucket": "ureport-mobile-fcm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192213840653:android:12a4b7b3646102e37af644",
+        "android_client_info": {
+          "package_name": "com.example.flutter_push_notifications"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkKN_BXvgle-DRK_QqqCzJ4KCd9KRMPik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192213840653:android:b08881a89f4930297af644",
+        "android_client_info": {
+          "package_name": "org.unicef.ureport_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkKN_BXvgle-DRK_QqqCzJ4KCd9KRMPik"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
