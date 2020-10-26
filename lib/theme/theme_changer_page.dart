@@ -95,6 +95,20 @@ class ThemeChangerPage extends StatelessWidget {
                 children: <Widget>[
                   Container(
                     child: IconButton(
+                        icon: Image.asset('assets/afghanistan.png'), onPressed: () {
+                      themeNotifier.setTheme(afghanistanTheme, 'assets/afghanistan.png');
+                    }),
+                  ),
+                  FittedBox( fit: BoxFit.fitWidth,
+                    child: Text('Afghanistan', textAlign: TextAlign.center, style:
+                    Theme.of(context).textTheme.bodyText1,),
+                  )
+                ]
+            ),
+            Column(
+                children: <Widget>[
+                  Container(
+                    child: IconButton(
                         icon: Image.asset('assets/argentina.png'), onPressed: () {
                       themeNotifier.setTheme(argentinaTheme, 'assets/argentina.png');
                     }),
@@ -112,6 +126,18 @@ class ThemeChangerPage extends StatelessWidget {
                     }),
                   ),
                   Text('Bangladesh', textAlign: TextAlign.center, style:
+                  Theme.of(context).textTheme.bodyText1,)
+                ]
+            ),
+            Column(
+                children: <Widget>[
+                  Container(
+                    child: IconButton(
+                        icon: Image.asset('assets/barbados.png'), onPressed: () {
+                      themeNotifier.setTheme(barbadosTheme, 'assets/barbados.png');
+                    }),
+                  ),
+                  Text('Barbados', textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
                 ]
             ),
@@ -266,7 +292,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/congo_brazzaville.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(congoBrazzaville,'assets/congo_brazzaville.png');
+                        }),
                   ),
                   Expanded(
                      child:Text('Congo Brazzaville',textAlign: TextAlign.center, style:
@@ -279,7 +307,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/costa_rica.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(costaRica,'assets/costa_rica.png');
+                        }),
                   ),
                   Text('Costa Rica',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -290,7 +320,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/cote_divoire.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(coteDivoire,'assets/cote_divoire.png');
+                        }),
                   ),
                 FittedBox(fit:BoxFit.fitWidth,
                 child:
@@ -303,7 +335,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/croatia.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(croatia,'assets/croatia.png');
+                        }),
                   ),
                   Text('Croatia', textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -314,7 +348,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/rd_congo.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(rdCongo,'assets/rd_congo.png');
+                        }),
                   ),
                   Text('RD Congo',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -326,7 +362,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/ecuador.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(ecuador,'assets/ecuador.png');
+                        }),
                   ),
                   Text('Ecuador',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -337,7 +375,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/el_salvador.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(elSalvador,'assets/el_salvador.png');
+                        }),
                   ),
               FittedBox(fit:BoxFit.fitWidth,
               child:
@@ -350,7 +390,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/eswatini.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(eswatini,'assets/eswatini.png');
+                        }),
                   ),
                   Text('Eswatini', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -362,7 +404,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/france.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(france,'assets/france.png');
+                        }),
                   ),
                   Text('France', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -373,7 +417,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/fsm.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(fsm,'assets/fsm.png');
+                        }),
                   ),
                   Text('FSM', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -383,7 +429,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/the_gambia.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(theGambia,'assets/the_gambia.png');
+                        }),
                   ),
                   Text('The Gambia',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -394,7 +442,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/ghana.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(ghana,'assets/ghana.png');
+                        }),
                   ),
                   Text('Ghana', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -405,7 +455,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/guatemala.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(guatemala,'assets/guatemala.png');
+                        }),
                   ),
                   Text('Guatemala', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -415,7 +467,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/guinee.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(guinee,'assets/guinee.png');
+                        }),
                   ),
                   Text('Guinee',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -426,7 +480,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/haiti.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(haiti,'assets/guatemala.png');
+                        }),
                   ),
                   Text('Haiti', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -437,7 +493,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/honduras.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(honduras,'assets/honduras.png');
+                        }),
                   ),
                   Text('Honduras',textAlign: TextAlign.center, style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -448,7 +506,9 @@ class ThemeChangerPage extends StatelessWidget {
                   Container(
                     child: IconButton(
                         icon: Image.asset('assets/india.png'),
-                        onPressed: () {}),
+                        onPressed: () {
+                          themeNotifier.setTheme(india,'assets/india.png');
+                        }),
                   ),
                   Text('India', textAlign: TextAlign.center,style:
                   Theme.of(context).textTheme.bodyText1,)
@@ -474,24 +534,3 @@ class ThemeChangerPage extends StatelessWidget {
 
 
 }
-
-// Column(
-// children: <Widget>[
-//
-// Text('', style:
-// Theme.of(context).textTheme.bodyText1,)
-// ]
-// ),
-// Column(
-//     children: <Widget>[
-//
-//       Text('', style:
-//       Theme.of(context).textTheme.bodyText1,)
-//     ]
-// ),            Column(
-//     children: <Widget>[
-//
-//       Text('', style:
-//       Theme.of(context).textTheme.bodyText1,)
-//     ]
-// ),
