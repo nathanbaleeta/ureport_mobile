@@ -12,14 +12,10 @@ class TabScreen extends StatefulWidget {
 }
 
 class _TabScreenState extends State<TabScreen> {
-
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static List<Widget> _widgetOptions = <Widget>[
-    Text('Polls'),
-    StoryListView()
-  ];
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static List<Widget> _widgetOptions = <Widget>[Text('Polls'), StoryListView()];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -50,12 +46,15 @@ class _TabScreenState extends State<TabScreen> {
       ),
       body: CustomScrollView(
         slivers: <Widget>[
+
         UReportAppBar(),
         SliverFillRemaining(
           child: _widgetOptions.elementAt(_selectedIndex),
         ),
+
         ],
       ),
     );
   }
 }
+
