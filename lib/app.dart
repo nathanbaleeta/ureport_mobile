@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:ureport_app/navigation/UReportAppBar.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
+
 
 class TabScreen extends StatefulWidget {
   TabScreen({Key key}) : super(key: key);
@@ -22,86 +25,36 @@ class _TabScreenState extends State<TabScreen> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+        items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.equalizer),
-            title: Text('Poll'),
+            title: Text('Poll',
+              style: Theme.of(context).primaryTextTheme.subtitle2,),
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
-            title: Text('Stories'),
+            title: Text('Stories',
+              style: Theme.of(context).primaryTextTheme.subtitle2,)
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Theme.of(context).accentColor,
         onTap: _onItemTapped,
       ),
       body: CustomScrollView(
         slivers: <Widget>[
-          SliverAppBar(
-            leadingWidth: 100,
-            leading: Row(mainAxisSize: MainAxisSize.max, children: [
-              IconButton(
-                icon: Image.asset('assets/UIcon.png'),
-                onPressed: () {},
-              ),
-              InkWell(
-                child: SizedBox(
-                    height: 20,
-                    width: 30,
-                    child: Container(
-                        decoration: BoxDecoration(
-                          color: Colors.blue,
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.all(1.0),
-                          child: Text(
-                            'ENG',
-                            textAlign: TextAlign.right,
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ))),
-              )
-            ]),
-            title: Text('', style: TextStyle(color: Colors.black)),
-            centerTitle: false,
-            floating: true,
-            pinned: false,
-            snap: false,
-            flexibleSpace: Container(
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/appBarBackground.png'),
-                  fit: BoxFit.cover,
-                ),
-              ),
-            ),
-            backgroundColor: Colors.transparent,
-            actions: <Widget>[
-              IconButton(
-                icon: Icon(Icons.settings),
-                tooltip: 'Settings',
-                onPressed: () {},
-              ),
-            ],
-          ),
-          SliverFillRemaining(
-            child: _widgetOptions.elementAt(_selectedIndex),
-          ),
+
+        UReportAppBar(),
+        SliverFillRemaining(
+          child: _widgetOptions.elementAt(_selectedIndex),
+        ),
+
         ],
       ),
     );
   }
 }
-//Center(child: _widgetOptions.elementAt(_selectedIndex),
-//         ),
 
-// appBar: AppBar(
-// title: const Text('U-Report',
-// style: TextStyle(color: Colors.black)),
-// backgroundColor: Colors.grey[400],
-// ),
