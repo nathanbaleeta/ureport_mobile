@@ -95,8 +95,6 @@ class _UReportAppState extends State<UReportApp> {
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
     return MaterialApp(
-
-      title: _title,
       theme: themeNotifier.getTheme(),
 
       home: TabScreen(),
