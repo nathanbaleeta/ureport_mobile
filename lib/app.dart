@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
+import 'package:ureport_app/stories/OpinionsWebview.dart';
 
 class TabScreen extends StatefulWidget {
   TabScreen({Key key}) : super(key: key);
@@ -12,7 +13,7 @@ class _TabScreenState extends State<TabScreen> {
   int _selectedIndex = 0;
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-  static List<Widget> _widgetOptions = <Widget>[Text('Polls'), StoryListView()];
+  static List<Widget> _widgetOptions = <Widget>[OpinionsWebView(), StoryListView(), ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -34,7 +35,7 @@ class _TabScreenState extends State<TabScreen> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.equalizer),
-            label: 'Poll',
+            label: 'Opinions',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
