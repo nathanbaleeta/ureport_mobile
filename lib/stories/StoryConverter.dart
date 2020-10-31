@@ -11,13 +11,20 @@ class StoryConverter {
   Future<List<Story>> getStories() async {
     var data = await http.get(organizationURL);
     var jsonData = json.decode(data.body);
-    print(jsonData);
+    // print(jsonData);
 
     List<Story> stories = [];
 
     for (var u in jsonData['results']) {
-      Story story = Story(u["id"], u["title"], u["category"]["image_url"],
-          u["summary"], u["tags"], u["category"]["name"], u["content"]);
+      String titleOrig = await u["title"];
+      List<int> titleInts = titleOrig.runes.toList();
+      String titleDecoded = utf8.decode(titleInts);
+      String contentOrig = await u["content"];
+      List<int> contentInts = contentOrig.runes.toList();
+      String contentDecoded = utf8.decode(contentInts);
+
+      Story story = Story(u["id"], titleDecoded, u["category"]["image_url"],
+          u["summary"], u["tags"], u["category"]["name"], contentDecoded);
       stories.add(story);
     }
 
