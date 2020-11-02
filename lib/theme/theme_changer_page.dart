@@ -125,8 +125,10 @@ class ThemeChangerPage extends StatelessWidget {
                       themeNotifier.setTheme(bangladeshTheme, 'assets/bangladesh.png');
                     }),
                   ),
-                  Text('Bangladesh', textAlign: TextAlign.center, style:
-                  Theme.of(context).textTheme.bodyText1,)
+                  FittedBox(fit:BoxFit.fitWidth,
+                    child: Text('Bangladesh', textAlign: TextAlign.center, style:
+                    Theme.of(context).textTheme.bodyText1,),
+                  )
                 ]
             ),
             Column(
@@ -433,8 +435,10 @@ class ThemeChangerPage extends StatelessWidget {
                           themeNotifier.setTheme(theGambia,'assets/the_gambia.png');
                         }),
                   ),
-                  Text('The Gambia',textAlign: TextAlign.center, style:
-                  Theme.of(context).textTheme.bodyText1,)
+                  FittedBox(fit:BoxFit.fitWidth,
+                    child: Text('The Gambia',textAlign: TextAlign.center, style:
+                    Theme.of(context).textTheme.bodyText1,),
+                  )
                 ]
             ),
             Column(
