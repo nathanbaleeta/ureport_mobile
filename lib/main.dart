@@ -7,23 +7,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-import 'package:ureport_app/theme/theme.dart';
-import 'package:ureport_app/theme/theme_notifier.dart';
-import 'package:provider/provider.dart';
-
-void main() => runApp(
-  MultiProvider(
-    providers: [
-      ChangeNotifierProvider<ThemeNotifier>(
-        create: (_) => ThemeNotifier(mainTheme, 'assets/LargeUreportIcon.png'),
-      ),
-    ],
-      child: UReportApp(),
-  ),
-);
-
-
-
+void main() => runApp(UReportApp());
 
 final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
@@ -93,10 +77,11 @@ class _UReportAppState extends State<UReportApp> {
 
   @override
   Widget build(BuildContext context) {
-    final themeNotifier = Provider.of<ThemeNotifier>(context);
     return MaterialApp(
-      theme: themeNotifier.getTheme(),
-
+      title: UReportApp._title,
+      theme: ThemeData(
+        primarySwatch: Colors.lightBlue,
+      ),
       home: TabScreen(),
     );
   }

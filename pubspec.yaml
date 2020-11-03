@@ -24,8 +24,7 @@ dependencies:
   firebase_messaging: ^7.0.3  
   flutter:
     sdk: flutter
-#The following adds the Provider Package which allows for multiple themes.
-  provider: ^4.0.2
+
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -78,4 +77,5 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/
+    - assets/UIcon.png
+    - assets/appBarBackground.png
