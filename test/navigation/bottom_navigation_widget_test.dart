@@ -10,7 +10,6 @@ Finder findBottomNavigationIcon(IconData icon) {
 void main() {
   // a group of widget tests for the App bar and bottom navigation bar
   group('App Bar', () {
-
     testWidgets(
         'Bottom Navigation Bar icons and text validation with tab-pressing validation',
         (WidgetTester tester) async {
@@ -22,7 +21,7 @@ void main() {
 
       await tester.tap(findBottomNavigationIcon(Icons.equalizer));
       await tester.pumpAndSettle();
-      expect(find.text('Poll'), findsOneWidget);
+      expect(find.text('Opinions'), findsOneWidget);
       expect(findBottomNavigationIcon(Icons.equalizer), findsOneWidget);
     });
   });
