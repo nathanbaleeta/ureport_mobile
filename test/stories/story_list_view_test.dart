@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ureport_app/main.dart' as ureport_app;
-import 'package:ureport_app/stories/StoryListView.dart';
 
 /* TODO:
  * - Find entire storyListView
  * - See that storylistview loads properly
  * - Find dropdown menu
  */
-
 
 Finder findBottomNavigationIcon(IconData icon) {
   return find.descendant(
@@ -22,9 +19,8 @@ abstract class mockStoryListView implements StoryListView {
 }
 */
 
-
 void main() {
-  group('Story List View', ()
+  /*group('Story List View', ()
   {
 
     testWidgets('validate list view appears', (WidgetTester tester) async {
@@ -47,11 +43,5 @@ void main() {
 
     });
 
-  });
-
-
+  }); */
 }
-
-
-
-

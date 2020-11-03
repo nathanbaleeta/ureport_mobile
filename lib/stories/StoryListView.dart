@@ -46,7 +46,7 @@ class _StoryListViewState extends State<StoryListView> {
           return Column(
             children: [
               Container(
-                color: Colors.grey.shade200,
+                color: Colors.grey.shade100,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
@@ -60,41 +60,6 @@ class _StoryListViewState extends State<StoryListView> {
                   ],
                 ),
               ),
-              /* Container(
-                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage('lib/stories/appBar_background.png'),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    FittedBox(
-                      fit: BoxFit.contain,
-                      child: Image(
-                        image:
-                            AssetImage('lib/stories/ureport_default_logo.png'),
-                      ),
-                    ),
-                    SizedBox(width: 130),
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Row(
-                        children: [
-                          Text(
-                            "SORT BY: ",
-                            style: TextStyle(fontSize: 16, color: Colors.black),
-                          ),
-                          SizedBox(width: 10),
-                          filterDropdown()
-                        ],
-                      ),
-                    ),
-                  ],
-                ), //Row for combining drop down menu and sort by text
-              ), */
               Expanded(
                   child: ListView.builder(
                 itemCount: snapshot.data.length,
@@ -111,7 +76,7 @@ class _StoryListViewState extends State<StoryListView> {
                           },
                           child: Container(
                             padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                            color: Colors.grey.shade200,
+                            color: Colors.grey.shade100,
                             child: Container(
                               color: Colors.white,
                               padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
@@ -175,8 +140,8 @@ class _StoryListViewState extends State<StoryListView> {
       value: category,
       icon: Icon(Icons.keyboard_arrow_down),
       iconSize: 18,
-      elevation: 16,
-      style: TextStyle(color: Colors.blue, fontSize: 18),
+      elevation: 10,
+      style: TextStyle(color: Colors.blue, fontSize: 16),
       items: categories.map<DropdownMenuItem<String>>((String value) {
         return DropdownMenuItem<String>(
           value: value,
