@@ -24,17 +24,19 @@ dependencies:
   firebase_messaging: ^7.0.3  
   flutter:
     sdk: flutter
+  flutter_widget_from_html_core: ^0.5.1+3
 #The following adds the Provider Package which allows for multiple themes.
   provider: ^4.0.2
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.3
-
+  webview_flutter:
 dev_dependencies:
   flutter_test:
     sdk: flutter
   http: ^0.12.2
+  test:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -51,6 +53,11 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - lib/stories/share.png
+    - lib/stories/ureport_default_logo.png
+    - lib/stories/appBar_background.png
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
@@ -77,5 +84,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-  assets:
-    - assets/
