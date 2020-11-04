@@ -24,8 +24,9 @@ final mainTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#43B3F2'), fontSize: 15.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#43B3F2'), fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
+
 );
 
 final belizeTheme = ThemeData(
@@ -39,7 +40,7 @@ final belizeTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500),//black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
   ),
 );
 
@@ -54,7 +55,7 @@ final lebanonTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#1EAA2C'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#1EAA2C'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
   ),
 );
 
@@ -69,7 +70,7 @@ final afghanistanTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#1EAA2C'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#1EAA2C'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
   ),
 );
 
@@ -84,7 +85,7 @@ final argentinaTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#43B3F2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#43B3F2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -99,7 +100,7 @@ final bangladeshTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -114,7 +115,7 @@ final barbadosTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#1C61CA'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#1C61CA'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
   ),
 );
 
@@ -129,7 +130,7 @@ final boliviaTheme = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#1CB5A6'), fontSize: 10.0, fontWeight: FontWeight.w500) //turquoise bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#1CB5A6'), fontSize: 10.0, fontWeight: FontWeight.w500) //turquoise bottom nav bar text
   ),
 );
 
@@ -144,7 +145,7 @@ final bosAndHerz = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -159,7 +160,7 @@ final botswana = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -174,7 +175,7 @@ final brasil = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#209048'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#209048'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
   ),
 );
 
@@ -189,7 +190,7 @@ final bulgaria = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
   ),
 );
 
@@ -204,7 +205,7 @@ final burkinaFaso= ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -219,7 +220,7 @@ final burundi = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -234,7 +235,7 @@ final cameroun = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#149924'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#149924'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
   ),
 );
 
@@ -249,7 +250,7 @@ final republicOfCentralAfrica= ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -264,7 +265,7 @@ final chile = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -279,7 +280,7 @@ final congoBrazzaville = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#149924'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#149924'), fontSize: 10.0, fontWeight: FontWeight.w500) //green bottom nav bar text
   ),
 );
 
@@ -294,7 +295,7 @@ final costaRica = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500),//black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
   ),
 );
 
@@ -309,7 +310,7 @@ final coteDivoire = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500),//black text for stories
-      subtitle2: TextStyle(color:HexColor('#EB9234'), fontSize: 10.0, fontWeight: FontWeight.w500)//orange bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#EB9234'), fontSize: 10.0, fontWeight: FontWeight.w500)//orange bottom nav bar text
   ),
 );
 
@@ -324,7 +325,7 @@ final croatia = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500),//black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500)//pink bottom nav bar text
   ),
 );
 
@@ -339,7 +340,7 @@ final rdCongo = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -354,7 +355,7 @@ final ecuador = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -369,7 +370,7 @@ final elSalvador = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -384,7 +385,7 @@ final eswatini = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -399,7 +400,7 @@ final france = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -414,7 +415,7 @@ final fsm = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //dark blue bottom nav bar text
   ),
 );
 
@@ -429,7 +430,7 @@ final theGambia = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -445,7 +446,7 @@ final ghana = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -460,7 +461,7 @@ final guatemala = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#43B3F2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#43B3F2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -475,7 +476,7 @@ final guinee= ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -490,7 +491,7 @@ final haiti = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#E42B57'), fontSize: 10.0, fontWeight: FontWeight.w500) //pink bottom nav bar text
   ),
 );
 
@@ -505,7 +506,7 @@ final honduras = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'),fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500), //black text for stories
-      subtitle2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#0B53B2'), fontSize: 10.0, fontWeight: FontWeight.w500) //blue bottom nav bar text
   ),
 );
 
@@ -520,7 +521,7 @@ final india = ThemeData(
       headline1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 30.0, fontWeight: FontWeight.w500),//white text
       subtitle1: TextStyle(color:HexColor('#FFFFFF'), fontSize: 20.0, fontWeight: FontWeight.w500),//White text headings for polls+categories
       bodyText1: TextStyle(color:HexColor('#000000'), fontSize: 12.0, fontWeight: FontWeight.w500),//black text for stories
-      subtitle2: TextStyle(color:HexColor('#EB9234'), fontSize: 10.0, fontWeight: FontWeight.w500)//orange bottom nav bar text
+      bodyText2: TextStyle(color:HexColor('#EB9234'), fontSize: 10.0, fontWeight: FontWeight.w500)//orange bottom nav bar text
   ),
 );
 

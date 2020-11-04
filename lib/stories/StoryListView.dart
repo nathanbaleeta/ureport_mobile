@@ -3,6 +3,7 @@ import 'package:ureport_app/stories/Story.dart';
 import 'package:ureport_app/stories/StoryConverter.dart';
 import 'package:ureport_app/stories/StoryDetail.dart';
 
+
 class StoryListView extends StatefulWidget {
   @override
   _StoryListViewState createState() => _StoryListViewState();
@@ -87,7 +88,7 @@ class _StoryListViewState extends State<StoryListView> {
                                       Container(
                                         padding:
                                             EdgeInsets.fromLTRB(10, 5, 10, 5),
-                                        color: Colors.blue.shade300,
+                                        color: Theme.of(context).accentColor,
                                         child: Text(
                                           snapshot.data[id].category,
                                           style: TextStyle(
