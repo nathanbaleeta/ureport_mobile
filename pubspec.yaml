@@ -57,6 +57,7 @@ flutter:
     - lib/stories/share.png
     - lib/stories/ureport_default_logo.png
     - lib/stories/appBar_background.png
+    - lib/polls/pollboticon.png
     - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see

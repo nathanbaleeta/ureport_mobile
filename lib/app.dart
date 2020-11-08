@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/navigation/UReportAppBar.dart';
+import 'package:ureport_app/polls/PollChat.dart';
 import 'package:ureport_app/stories/OpinionsWebview.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
@@ -17,6 +18,7 @@ class _TabScreenState extends State<TabScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     OpinionsWebView(),
     StoryListView(),
+    PollChat(),
   ];
 
   void _onItemTapped(int index) {
@@ -37,7 +39,10 @@ class _TabScreenState extends State<TabScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
             label: 'Stories',
-
+          ),
+          BottomNavigationBarItem(
+            icon: ImageIcon(AssetImage('lib/polls/pollboticon.png')),
+            label: 'Poll Bot',
           ),
         ],
         currentIndex: _selectedIndex,
