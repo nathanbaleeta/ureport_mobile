@@ -132,9 +132,15 @@ class RegistrationScreen extends StatefulWidget {
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
   TextStyle style = TextStyle(fontFamily: 'Montserrat', fontSize: 20.0);
+  // utilize controllers to extract state of information and test validity/error messages
   final _phoneController = TextEditingController();
   final _codeController = TextEditingController();
 
+
+  // modify this function with robust verification and phone input dialogue
+  // phone number must contain country code, area code, all in +13035501234 format
+  // passcode was incorrectly entered, either prompt for new code or try entering again
+  // case 1: timeout, would you like to try verifying again, case 2: try again
   Future registerUser(String mobile, BuildContext context) async{
 
     FirebaseAuth _auth = FirebaseAuth.instance;
@@ -152,7 +158,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           });
         },
         verificationFailed: (AuthException authException){
-          print(authException.message);
+          print(authException.message); // display to user instead of console
         },
         codeSent: (String verificationId, [int forceResendingToken]) {
           // grab input from the user
@@ -198,7 +204,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         codeAutoRetrievalTimeout: (String verificationId) {
           verificationId = verificationId;
           print(verificationId);
-          print("Verification Timeout");
+          print("Verification Timeout"); // here's the conditional logic for case 1 passcode message
         }
     );
   }
