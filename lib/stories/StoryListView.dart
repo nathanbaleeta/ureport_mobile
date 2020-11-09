@@ -85,13 +85,15 @@ class _StoryListViewState extends State<StoryListView> {
                                   Row(
                                     children: [
                                       Container(
-                                        padding:
-                                            EdgeInsets.fromLTRB(10, 5, 10, 5),
-                                        color: Colors.blue.shade300,
-                                        child: Text(snapshot.data[id].category,
+                                          padding:
+                                              EdgeInsets.fromLTRB(10, 5, 10, 5),
+                                          color: Theme.of(context).accentColor,
+                                          child: Text(
+                                            snapshot.data[id].category,
                                             style: TextStyle(
                                                 fontSize: 20,
-                                                color: Colors.white)),
+                                                color: Colors.white),
+                                          )
                                       ),
                                       Expanded(child: SizedBox()),
                                       Image(
