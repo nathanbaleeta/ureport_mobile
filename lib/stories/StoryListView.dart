@@ -89,9 +89,9 @@ class _StoryListViewState extends State<StoryListView> {
                                             EdgeInsets.fromLTRB(10, 5, 10, 5),
                                         color: Colors.blue.shade300,
                                         child: Text(snapshot.data[id].category,
-                                            style: Theme.of(context)
-                                                .primaryTextTheme
-                                                .subtitle1),
+                                            style: TextStyle(
+                                                fontSize: 20,
+                                                color: Colors.white)),
                                       ),
                                       Expanded(child: SizedBox()),
                                       Image(
