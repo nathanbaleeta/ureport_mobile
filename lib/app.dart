@@ -37,6 +37,7 @@ class _TabScreenState extends State<TabScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.chat),
             label: 'Stories',
+
           ),
         ],
         currentIndex: _selectedIndex,

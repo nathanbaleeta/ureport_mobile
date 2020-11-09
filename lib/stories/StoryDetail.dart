@@ -27,7 +27,7 @@ class StoryDetail extends StatelessWidget {
                 children: [
                   Container(
                     padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                    color: Colors.blue.shade300,
+                    color: Theme.of(context).accentColor,
                     child: Text(
                       story.category,
                       style: TextStyle(fontSize: 20, color: Colors.white),
