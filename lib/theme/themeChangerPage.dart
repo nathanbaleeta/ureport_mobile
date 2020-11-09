@@ -1,5 +1,5 @@
 
-import 'package:ureport_app/theme/theme_notifier.dart';
+import 'package:ureport_app/theme/themeNotifier.dart';
 import 'package:ureport_app/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

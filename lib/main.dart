@@ -8,7 +8,7 @@ import 'package:http/http.dart' as http;
 import 'dart:convert';
 
 import 'package:ureport_app/theme/theme.dart';
-import 'package:ureport_app/theme/theme_notifier.dart';
+import 'package:ureport_app/theme/themeNotifier.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(

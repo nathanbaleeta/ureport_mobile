@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ureport_app/theme/theme_changer_page.dart';
+import 'package:ureport_app/theme/themeChangerPage.dart';
 import 'package:provider/provider.dart';
-import 'package:ureport_app/theme/theme_notifier.dart';
+import 'package:ureport_app/theme/themeNotifier.dart';
 
 class UReportAppBar extends StatelessWidget{
   @override
