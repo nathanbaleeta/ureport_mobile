@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:ureport_app/navigation/UReportAppBar.dart';
 import 'package:ureport_app/polls/PollChat.dart';
-import 'package:ureport_app/stories/OpinionsWebview.dart';
+import 'package:ureport_app/Opinions/OpinionsWebview.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
 class TabScreen extends StatefulWidget {
@@ -30,6 +30,7 @@ class _TabScreenState extends State<TabScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(

@@ -27,9 +27,7 @@ class _PollChatState extends State<PollChat> {
             sender: "bot",
             pollType: "Face Mask Poll",
           ),
-          SizedBox(
-            height: 10,
-          ),
+          SizedBox(height: 10,),
           ChatBubble(
             message: "A",
             sender: "user",
@@ -42,12 +40,13 @@ class _PollChatState extends State<PollChat> {
             sender: "bot",
             pollType: "Face Mask Poll",
           ),
-          Expanded(child: Container()),
+
+          SizedBox(height: 40),
           Container(
             color: Colors.white,
             child: Column(
               children: [
-                Padding(
+                Container(
                   padding: const EdgeInsets.all(10.0),
                   child: TextField(
                     controller: messageController,
@@ -65,15 +64,17 @@ class _PollChatState extends State<PollChat> {
                       onTap: () {
                         sendMessage(); // TODO not implemented
                       },
-                      child: Container(
-                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                        decoration: BoxDecoration(
-                            color: Colors.yellow.shade600,
-                            borderRadius: BorderRadius.circular(10)),
-                        child: Text("Submit"),
+                      child: Expanded(
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          decoration: BoxDecoration(
+                              color: Colors.yellow.shade600,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text("Submit"),
+                        ),
                       ),
                     ),
-                    SizedBox(width: 10)
+                    SizedBox(width: 10),
                   ],
                 ),
                 SizedBox(

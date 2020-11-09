@@ -26,6 +26,18 @@ class _ChatBubbleState extends State<ChatBubble> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      margin: (sentByMe == true)
+          ? EdgeInsets.only(
+            top: 8.0,
+            bottom: 8.0,
+            left: 80.0,
+            )
+          : EdgeInsets.only(
+            top: 8.0,
+            bottom: 8.0,
+            ),
+
+
       padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
       decoration: BoxDecoration(
           color: Colors.white,
