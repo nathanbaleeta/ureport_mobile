@@ -94,10 +94,12 @@ class _UReportAppState extends State<UReportApp> {
   @override
   Widget build(BuildContext context) {
     final themeNotifier = Provider.of<ThemeNotifier>(context);
+
+    const bool showLogin = true; // to be changed depending on user login state
+
     return MaterialApp(
       theme: themeNotifier.getTheme(),
-
-      home: TabScreen(),
+      home: showLogin ? RegistrationScreen() : TabScreen(), // home : TabScreen(),
     );
   }
 }

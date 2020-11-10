@@ -30,6 +30,13 @@
             {
               "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "192213840653-dugfmht3t8046mk6fgq8akagvdord4d1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.unicef.ureport-app"
+              }
             }
           ]
         }
@@ -59,6 +66,13 @@
             {
               "client_id": "192213840653-s5ra03vdd906bmramvoufsdlc9lbvs6m.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "192213840653-dugfmht3t8046mk6fgq8akagvdord4d1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.unicef.ureport-app"
+              }
             }
           ]
         }
