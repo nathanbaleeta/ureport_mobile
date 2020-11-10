@@ -71,19 +71,39 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   final _phoneController = TextEditingController();
   final _codeController = TextEditingController();
 
+  void displayRegistrationError(String title, String errorMessage) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: new Text(title),
+          content:
+          new Text(errorMessage),
+          actions: <Widget>[
+            new FlatButton(
+              child: new Text("OK"),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
+      },
+    );
+  }
 
-  // modify this function with robust verification and phone input dialogue
-  // phone number must contain country code, area code, all in +13035501234 format
-  // passcode was incorrectly entered, either prompt for new code or try entering again
-  // case 1: timeout, would you like to try verifying again, case 2: try again
   Future registerUser(String mobile, BuildContext context) async{
 
-    Firebase.initializeApp();
+    // Firebase.initializeApp();
     FirebaseAuth _auth = FirebaseAuth.instance;
+
+    // in the future, to adapt to varying app languages
+    // _auth.setLanguageCode("fr"); or _auth.useAppLanguage();
 
     _auth.verifyPhoneNumber(
         phoneNumber: mobile,
         timeout: Duration(seconds: 60),
+
         verificationCompleted: (AuthCredential credential){
           _auth.signInWithCredential(credential).then((result){
             Navigator.pushReplacement(context, MaterialPageRoute(
@@ -91,10 +111,22 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             ));
           }).catchError((e){
             print(e);
+            const eMessage = "Something went wrong while auto-retrieving"
+                "your verification code. Please try again.";
+            displayRegistrationError("Verification Error", eMessage);
+            _codeController.clear();
           });
         },
-        verificationFailed: (FirebaseAuthException authException){
-          print(authException.message); // display to user instead of console
+
+        verificationFailed: (FirebaseAuthException authException) {
+          print(authException.code);
+          const eMessage = "The format of the phone number provided is incorrect. "
+            "Please enter the phone number in the following format:\n\n"
+            "[+][country code][# including area code]";
+          displayRegistrationError("Registration Error", eMessage); // may remain authException.message instead
+          _phoneController.clear();
+          print(authException);
+
         },
         codeSent: (String verificationId, [int forceResendingToken]) {
           // grab input from the user
@@ -127,20 +159,36 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         Navigator.pushReplacement(context, MaterialPageRoute(
                             builder: (context) => TabScreen()
                         ));
+
                       }).catchError((e){
-                        print(e);
+                        print("VERIFICATION ERROR LOCATION 2");
+                        Navigator.of(context).pop();
+                        const eMessage = "The SMS verification code "
+                            "input to authenticate your device is invalid. "
+                            "Please send another verification code via SMS and "
+                            "try again.";
+                        displayRegistrationError("Invalid Verification Code",
+                            eMessage);
+                        _codeController.clear();
                       });
                     },
                   )
                 ],
               )
           );
-
         },
         codeAutoRetrievalTimeout: (String verificationId) {
           verificationId = verificationId;
           print(verificationId);
-          print("Verification Timeout"); // here's the conditional logic for case 1 passcode message
+          print("Auto-Retrieval Verification Timeout.");
+          /*
+          const eMessage = "The verification code that was sent has timed out. "
+              "Please send another verification code via SMS and "
+              "try again.";
+          displayRegistrationError("Verification Code Timeout",
+              eMessage);
+           */
+
         }
     );
   }
@@ -176,6 +224,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
         padding: EdgeInsets.fromLTRB(20.0, 15.0, 20.0, 15.0),
         onPressed: () {
           final mobile = _phoneController.text.trim();
+          Firebase.initializeApp();
           registerUser(mobile, context);
         },
         child: Text("Sign Up",
