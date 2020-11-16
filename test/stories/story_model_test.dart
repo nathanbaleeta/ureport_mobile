@@ -19,7 +19,8 @@ void main() {
     }
 
     // verify titles of story test data
-    expect(stories[6].title, "Virtual Reality in the Classroom");
-    expect(stories[9].title, "COMMON ERRORS JOB APPLICANTS MAKE");
+    expect(stories[6].title,
+        "#IWD 2019 - our gender should never have to limit us!");
+    expect(stories[9].title, "MY BREASTFEEDING EXPERIENCE");
   });
 }
