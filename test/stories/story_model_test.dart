@@ -1,5 +1,5 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:ureport_app/stories/Story.dart';
+
 import '../../lib/stories/StoryConverter.dart';
 
 void main() {
@@ -8,21 +8,18 @@ void main() {
   test('Validate story model test data', () async {
     final storyConverter = StoryConverter();
     final stories = await storyConverter.getStories();
-    final idsToVerify = [713, 685, 677, 668, 648, 635, 625, 580, 579, 578];
+    final idsToVerify = [946, 713, 685, 677, 668, 648, 635, 625, 580, 579];
     expect(stories.length, 10); // verify the length of story test data
 
     for (int i = 0; i < stories.length; i++) {
       expect(stories[i].id, idsToVerify[i]); // verify hardcoded story data ids
       // verify picture website source for each test story
       expect(stories[i].picture.substring(0, 47),
-        "https://dl-ureport.s3.amazonaws.com/categories/");
+          "https://dl-ureport.s3.amazonaws.com/categories/");
     }
 
     // verify titles of story test data
     expect(stories[6].title, "Virtual Reality in the Classroom");
     expect(stories[9].title, "COMMON ERRORS JOB APPLICANTS MAKE");
   });
-  
 }
-
-
