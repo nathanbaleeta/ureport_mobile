@@ -235,6 +235,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
 
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Center(
         child: Container(
           color: Colors.white,
@@ -244,13 +245,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                SizedBox(
-                  height: 155.0,
-                  child: Image.asset(
-                    "assets/UIcon.png",
-                    fit: BoxFit.contain,
+              new Container(
+              width: 155.0,
+                height: 155.0,
+                alignment: Alignment.center,
+                decoration: new BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage('assets/LargeUreportIcon.png'),
+                      fit: BoxFit.fill
                   ),
                 ),
+              ),
                 SizedBox(height: 45.0),
                 phoneField,
                 SizedBox( height: 35.0),
