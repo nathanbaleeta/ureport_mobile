@@ -4,6 +4,7 @@ import 'package:ureport_app/navigation/UReportAppBar.dart';
 import 'package:ureport_app/stories/OpinionsWebview.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:ureport_app/registration/RegisterPage.dart';
 
 class TabScreen extends StatefulWidget {
   TabScreen({Key key}) : super(key: key);
@@ -157,7 +158,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
 
                       auth.signInWithCredential(_credential).then((result){
                         Navigator.pushReplacement(context, MaterialPageRoute(
-                            builder: (context) => TabScreen()
+                            builder: (context) => RegisterPage()
                         ));
 
                       }).catchError((e){
