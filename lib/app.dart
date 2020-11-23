@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ureport_app/navigation/UReportAppBar.dart';
-import 'package:ureport_app/polls/PollChat.dart';
 import 'package:ureport_app/Opinions/OpinionsWebview.dart';
+import 'package:ureport_app/navigation/UReportAppBar.dart';
+import 'package:ureport_app/polls/PollDashChat.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
 class TabScreen extends StatefulWidget {
@@ -18,7 +18,7 @@ class _TabScreenState extends State<TabScreen> {
   static List<Widget> _widgetOptions = <Widget>[
     OpinionsWebView(),
     StoryListView(),
-    PollChat(),
+    PollDashChat() // PollChat(),
   ];
 
   void _onItemTapped(int index) {
