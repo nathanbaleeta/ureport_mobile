@@ -27,7 +27,9 @@ class _PollChatState extends State<PollChat> {
             sender: "bot",
             pollType: "Face Mask Poll",
           ),
-          SizedBox(height: 10,),
+          SizedBox(
+            height: 10,
+          ),
           ChatBubble(
             message: "A",
             sender: "user",
@@ -40,7 +42,6 @@ class _PollChatState extends State<PollChat> {
             sender: "bot",
             pollType: "Face Mask Poll",
           ),
-
           SizedBox(height: 40),
           Container(
             color: Colors.white,
@@ -89,6 +90,8 @@ class _PollChatState extends State<PollChat> {
   }
 
   sendMessage() {
-    // TODO
+    String message = messageController.text;
+    print("Used typed: " + message);
+    // TODO backend with rapidpro
   }
 }
