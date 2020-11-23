@@ -11,7 +11,7 @@ class RegisterPage extends StatelessWidget {
       body: Center(
         child: new Column(
             children: <Widget>[
-              SizedBox(height: 80),
+              SizedBox(height: 60),
 
               Center(
                 child: Stack(
@@ -64,36 +64,42 @@ class RegisterPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-                FlatButton(
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text("Select Your Country Here",
-                    style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w500)),
-                  ),
-                  textColor: Colors.white,
-                  color: Theme.of(context).accentColor,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ThemeChangerPage()),
-                    );
-                  }),
+              SizedBox(height: 30),
+                SizedBox(
+                  height: 40,
+                  child: FlatButton(
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Text("Select Your Country Here",
+                      style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w500)),
+                    ),
+                    textColor: Colors.white,
+                    color: Theme.of(context).accentColor,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ThemeChangerPage()),
+                      );
+                    }),
+                ),
                 Text("or"),
-                FlatButton(
-                  child: Padding(
-                    padding: const EdgeInsets.all(6.0),
-                    child: Text("Continue to the app",
-                        style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w500)),
-                  ),
-                  textColor: Colors.white,
-                  color: Theme.of(context).accentColor,
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => TabScreen()),
-                    );
-                  })
+                SizedBox(
+                  height: 40,
+                  child: FlatButton(
+                    child: Padding(
+                      padding: const EdgeInsets.all(6.0),
+                      child: Text("Continue to the app",
+                          style: TextStyle(color:Colors.white, fontSize: 20.0, fontWeight: FontWeight.w500)),
+                    ),
+                    textColor: Colors.white,
+                    color: Theme.of(context).accentColor,
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TabScreen()),
+                      );
+                    }),
+                )
          ]
         )
       )
