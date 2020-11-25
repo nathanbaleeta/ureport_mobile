@@ -8,7 +8,6 @@ class PollDashChat extends StatefulWidget {
 
 class _PollDashChatState extends State<PollDashChat> {
   final GlobalKey<DashChatState> _chatViewKey = GlobalKey<DashChatState>();
-  final scrollController = ScrollController();
 
   final ChatUser user = ChatUser(
     name: "User",
@@ -22,7 +21,6 @@ class _PollDashChatState extends State<PollDashChat> {
 
   final List<ChatMessage> messages =
       List<ChatMessage>(); // needs to be stored outside this widget
-  var m = List<ChatMessage>();
   var i = 0;
 
   @override
@@ -74,34 +72,36 @@ class _PollDashChatState extends State<PollDashChat> {
 
   @override
   Widget build(BuildContext context) {
-    return DashChat(
-      key: _chatViewKey,
-      inverted: false,
-      onSend: onSend,
-      sendOnEnter: true,
-      textInputAction: TextInputAction.send,
-      user: user,
-      inputDecoration:
-          InputDecoration.collapsed(hintText: "Add message here..."),
-      dateFormat: DateFormat('yyyy-MMM-dd'),
-      timeFormat: DateFormat('HH:mm'),
-      messages: messages,
-      showUserAvatar: false,
-      showAvatarForEveryMessage: false,
-      scrollToBottom: true,
-      onPressAvatar: (ChatUser user) {
-        print("OnPressAvatar: ${user.name}");
-      },
-      onLongPressAvatar: (ChatUser user) {
-        print("OnLongPressAvatar: ${user.name}");
-      },
-      inputMaxLines: 5,
-      messageContainerPadding: EdgeInsets.only(left: 5.0, right: 5.0),
-      alwaysShowSend: true,
-      inputTextStyle: TextStyle(fontSize: 16.0),
-      inputContainerStyle: BoxDecoration(
-        border: Border.all(width: 0.0),
-        color: Colors.white,
+    return SafeArea(
+      child: DashChat(
+        key: _chatViewKey,
+        inverted: false,
+        height: 50,
+        onSend: onSend,
+        sendOnEnter: true,
+        // textInputAction: TextInputAction.send,
+        user: user,
+        inputDecoration:
+            InputDecoration.collapsed(hintText: "Your reply here..."),
+        dateFormat: DateFormat('yyyy-MMM-dd'),
+        timeFormat: DateFormat('HH:mm'),
+        messages: messages,
+        showUserAvatar: false,
+        showAvatarForEveryMessage: false,
+        scrollToBottom: true,
+        onPressAvatar: (ChatUser user) {
+          print("OnPressAvatar: ${user.name}");
+        },
+        onLongPressAvatar: (ChatUser user) {
+          print("OnLongPressAvatar: ${user.name}");
+        },
+        messageContainerPadding: EdgeInsets.only(left: 5.0, right: 5.0),
+        alwaysShowSend: true,
+        inputTextStyle: TextStyle(fontSize: 16.0),
+        inputContainerStyle: BoxDecoration(
+          border: Border.all(width: 0.0),
+          color: Colors.white,
+        ),
       ),
     );
   }
