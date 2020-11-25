@@ -1,5 +1,8 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:ureport_app/polls/ChatBubble.dart';
+import 'package:ureport_app/polls/Message.dart';
 
 class PollChat extends StatefulWidget {
   @override
@@ -8,24 +11,86 @@ class PollChat extends StatefulWidget {
 
 class _PollChatState extends State<PollChat> {
   TextEditingController messageController = new TextEditingController();
+  List<Message> messages = List<Message>();
+  ScrollController _scrollController = new ScrollController();
 
   @override
   void initState() {
+    initHardcodedMessages();
     super.initState();
+  }
+
+  void initHardcodedMessages() {
+    Message bot1 = Message(
+        text:
+            "How often do you wear a face mask? \n A) Only when I’m talking to someone \n B) Only when I’m asked to wear it \n Reply with either A or B.",
+        sender: "bot");
+    Message user1 = Message(text: "A", sender: "user");
+    Message bot2 = Message(
+        text:
+            "Thank you for completing our Coronavirus poll. We will update you when more polls come out!",
+        sender: "bot");
+    messages.add(bot1);
+    messages.add(user1);
+    messages.add(bot2);
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      color: Colors.grey.shade100,
-      padding: EdgeInsets.fromLTRB(10, 10, 10, 0),
+        padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
+        child: Column(
+          children: [
+            Expanded(child: ChatStream()),
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: [
+                  Container(
+                    padding: const EdgeInsets.all(10.0),
+                    child: TextField(
+                      controller: messageController,
+                      decoration: InputDecoration(
+                        hintText: "Your reply...",
+                        hintStyle: TextStyle(color: Colors.grey.shade500),
+                        border: InputBorder.none,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      GestureDetector(
+                        onTap: () {
+                          sendMessage(); // TODO not implemented
+                        },
+                        child: Container(
+                          padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                          decoration: BoxDecoration(
+                              color: Colors.yellow.shade600,
+                              borderRadius: BorderRadius.circular(10)),
+                          child: Text("Submit"),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                    ],
+                  ),
+                  SizedBox(
+                    height: 10,
+                  )
+                ],
+              ),
+            ),
+          ],
+        ));
+    /* return Container(
+      padding: EdgeInsets.fromLTRB(5, 10, 5, 0),
       child: Column(
         children: [
           ChatBubble(
             message:
                 "How often do you wear a face mask? \n A) Only when I’m talking to someone \n B) Only when I’m asked to wear it \n Reply with either A or B.",
             sender: "bot",
-            pollType: "Face Mask Poll",
           ),
           SizedBox(
             height: 10,
@@ -33,14 +98,12 @@ class _PollChatState extends State<PollChat> {
           ChatBubble(
             message: "A",
             sender: "user",
-            pollType: null,
           ),
           SizedBox(height: 10),
           ChatBubble(
             message:
                 "Thank you for completing our Coronavirus poll. We will update you when more polls come out!",
             sender: "bot",
-            pollType: "Face Mask Poll",
           ),
           SizedBox(height: 40),
           Container(
@@ -52,7 +115,7 @@ class _PollChatState extends State<PollChat> {
                   child: TextField(
                     controller: messageController,
                     decoration: InputDecoration(
-                      hintText: "Type reply...",
+                      hintText: "Your reply...",
                       hintStyle: TextStyle(color: Colors.grey.shade500),
                       border: InputBorder.none,
                     ),
@@ -65,14 +128,12 @@ class _PollChatState extends State<PollChat> {
                       onTap: () {
                         sendMessage(); // TODO not implemented
                       },
-                      child: Expanded(
-                        child: Container(
-                          padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
-                          decoration: BoxDecoration(
-                              color: Colors.yellow.shade600,
-                              borderRadius: BorderRadius.circular(10)),
-                          child: Text("Submit"),
-                        ),
+                      child: Container(
+                        padding: EdgeInsets.fromLTRB(10, 5, 10, 5),
+                        decoration: BoxDecoration(
+                            color: Colors.yellow.shade600,
+                            borderRadius: BorderRadius.circular(10)),
+                        child: Text("Submit"),
                       ),
                     ),
                     SizedBox(width: 10),
@@ -86,12 +147,43 @@ class _PollChatState extends State<PollChat> {
           ),
         ],
       ),
-    );
+    );*/
   }
 
-  sendMessage() {
+  Widget ChatStream() {
+    return ListView.builder(
+        controller: _scrollController,
+        itemCount: messages.length,
+        itemBuilder: (context, index) {
+          scrollToEnd();
+          Message msg = messages[index];
+          return ChatBubble(
+            message: msg.text,
+            sender: msg.sender,
+          );
+        });
+  }
+
+  void sendMessage() {
     String message = messageController.text;
-    print("Used typed: " + message);
-    // TODO backend with rapidpro
+    messageController.text = "";
+    setState(() {
+      messages.add(Message(text: message, sender: "user"));
+    });
+    // TODO: backend with rapidpro
+  }
+
+  void scrollToEnd() {
+    Timer(
+        Duration(milliseconds: 100),
+        () => {
+              if (_scrollController.hasClients)
+                {
+                  _scrollController.animateTo(
+                      _scrollController.position.maxScrollExtent,
+                      duration: Duration(milliseconds: 500),
+                      curve: Curves.ease)
+                }
+            });
   }
 }
