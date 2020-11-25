@@ -37,7 +37,7 @@ class StoryDetail extends StatelessWidget {
                   story.content == null
                       ? Container()
                       : Image(
-                          image: AssetImage('lib/stories/share.png'),
+                          image: AssetImage('lib/media/share.png'),
                           width: 30,
                         ),
                 ],

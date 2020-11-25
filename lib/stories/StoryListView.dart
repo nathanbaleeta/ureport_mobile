@@ -3,7 +3,6 @@ import 'package:ureport_app/stories/Story.dart';
 import 'package:ureport_app/stories/StoryConverter.dart';
 import 'package:ureport_app/stories/StoryDetail.dart';
 
-
 class StoryListView extends StatefulWidget {
   @override
   _StoryListViewState createState() => _StoryListViewState();
@@ -99,7 +98,7 @@ class _StoryListViewState extends State<StoryListView> {
                                       Expanded(child: SizedBox()),
                                       Image(
                                         image:
-                                            AssetImage('lib/stories/share.png'),
+                                            AssetImage('lib/media/share.png'),
                                         width: 30,
                                       ),
                                     ],
