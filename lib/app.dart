@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ureport_app/Opinions/OpinionsWebview.dart';
 import 'package:ureport_app/navigation/UReportAppBar.dart';
 import 'package:ureport_app/polls/PollChat.dart';
-import 'package:ureport_app/Opinions/OpinionsWebview.dart';
 import 'package:ureport_app/stories/StoryListView.dart';
 
 class TabScreen extends StatefulWidget {
@@ -42,7 +42,7 @@ class _TabScreenState extends State<TabScreen> {
             label: 'Stories',
           ),
           BottomNavigationBarItem(
-            icon: ImageIcon(AssetImage('lib/polls/pollboticon.png')),
+            icon: ImageIcon(AssetImage('lib/media/pollboticon.png')),
             label: 'Poll Bot',
           ),
         ],
