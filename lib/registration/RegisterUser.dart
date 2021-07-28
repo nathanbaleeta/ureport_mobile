@@ -29,7 +29,7 @@
 //     Map<String, String> headers = {
 //       HttpHeaders.contentTypeHeader: 'application/json',
 //       HttpHeaders.authorizationHeader:
-//           'Token 9a3970ab2bb7def48c69bce852f93b80d2d02d61'
+//           'Token XXX'
 //     };
 //     Map<String, String> json = user.contact;
 
